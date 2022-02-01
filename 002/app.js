@@ -82,3 +82,16 @@ console.log('stringas 0', !!'0');
 
 console.log(0, !!0); // vienintelis skaicius virstantis i false
 console.log(21321, !!21321);
+
+let kodas;
+// 
+// 
+if (25 * 25) {
+    // block1
+    kodas = 'per BLOCK 1';
+} else {
+    // block2
+    kodas = 'per BLOCK 2';
+}
+
+console.log(kodas);
