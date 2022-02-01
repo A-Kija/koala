@@ -14,29 +14,38 @@ let vaiko2Saldainiai;
 
 let saldainiuSuma;
 
-
 // vaiko1Saldainiai = 5; // pirmas vaikas turi 5 saldainius
 // vaiko2Saldainiai = 6;
 
 vaiko1Saldainiai = rand(1, 10);
 vaiko2Saldainiai = rand(1, 10);
 
-
 saldainiuSuma = vaiko1Saldainiai + vaiko2Saldainiai;
-
 
 console.log('vaikas 1:', vaiko1Saldainiai);
 console.log('vaikas 2:', vaiko2Saldainiai);
 console.log('Bendrai:', saldainiuSuma);
-
 
 console.log(8 % 3);
 
 let skaicius;
 skaicius = 5;
 
-skaicius--;
-skaicius--;
-skaicius--;
+// skaicius--;
+// skaicius--;
+// skaicius--;
+
+let x;
+
+// x = ++skaicius * skaicius++;
+
+// console.log(skaicius);
+
+// skaicius = skaicius + 8;
+skaicius += 8;
 
 console.log(skaicius);
+
+let manoVardas = '<h1>Arvydas</h1>';
+
+console.log(manoVardas);
