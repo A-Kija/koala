@@ -66,8 +66,19 @@ console.log('T || F', T || F);
 console.log('F || T', F || T);
 console.log('F || F', F || F);
 
-
 console.log('T && T', T && T);
 console.log('T && F', T && F);
 console.log('F && T', F && T);
 console.log('F && F', F && F);
+
+console.log('!T', !T);
+console.log('!F', !F);
+
+
+console.log('asilas', !!'asilas');
+console.log('', !!''); // vienintelis stringas virstanti i false
+console.log(' ', !!' ');
+console.log('stringas 0', !!'0');
+
+console.log(0, !!0); // vienintelis skaicius virstantis i false
+console.log(21321, !!21321);
