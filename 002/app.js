@@ -57,3 +57,17 @@ let catParts = '^_=';
 let newCat = catParts[2] + catParts[0] + catParts[1] + catParts[0] + catParts[2];
 
 console.log(newCat);
+
+let T = true;
+let F = false;
+
+console.log('T || T', T || T);
+console.log('T || F', T || F);
+console.log('F || T', F || T);
+console.log('F || F', F || F);
+
+
+console.log('T && T', T && T);
+console.log('T && F', T && F);
+console.log('F && T', F && T);
+console.log('F && F', F && F);
