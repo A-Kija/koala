@@ -1,3 +1,8 @@
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 // RECAP
 
 let pirmas;
@@ -95,3 +100,51 @@ if (25 * 25) {
 }
 
 console.log(kodas);
+
+
+
+
+let kokia = rand(0, 1);
+
+if (kokia) {
+    console.log('Gerai buvo');
+} else {
+    console.log('Nu nelabai kaip buvo');
+}
+
+console.log(100 / 0);
+
+
+let kazkoksSkaicius = rand(5, 15);
+console.log(kazkoksSkaicius);
+
+let didintMazint = rand(0, 1);
+
+if (didintMazint) {
+    console.log(++kazkoksSkaicius);
+} else {
+    console.log(--kazkoksSkaicius);
+}
+
+
+let pagrindiniame = 'Labas ';
+let salutinis;
+
+if (1) {
+    salutinis = 'Afrika';
+    console.log(pagrindiniame + salutinis);
+} else {
+    salutinis = 'America';
+    console.log(pagrindiniame + salutinis);
+}
+
+console.log(pagrindiniame + salutinis);
+
+
+if (0) {
+    console.log('green');
+} else if (0) {
+    console.log('blue');
+} else {
+    console.log('red');
+}
