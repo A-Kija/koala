@@ -32,3 +32,28 @@ let operacija;
 operacija = raideA + raideB + '--- --- ---' + 'SUPER';
 
 console.log(operacija);
+
+let cat1 = '=';
+let cat2 = '_';
+let cat3 = '^';
+
+let cat;
+
+cat = cat1 + cat3 + cat2 + cat3 + cat1;
+
+console.log(cat, cat1 + cat3 + cat2 + cat3 + cat1);
+
+let kintamasis1 = '5';
+let kintamasis2 = 5;
+
+console.log(kintamasis1 * kintamasis2);
+
+let namas = 'ABC';
+
+console.log(namas[1], namas[2]);
+
+let catParts = '^_=';
+
+let newCat = catParts[2] + catParts[0] + catParts[1] + catParts[0] + catParts[2];
+
+console.log(newCat);
