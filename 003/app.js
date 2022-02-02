@@ -107,3 +107,16 @@ if (skaiciusNr1 + skaiciusNr2 > skaiciusNr1 * skaiciusNr2) {
 } else {
     console.log('* daugiau', skaiciusNr1, skaiciusNr2);
 }
+
+let petras = rand(0, 3);
+let jonas = rand(0, 3);
+
+console.log(`Petras: ${petras} ir Jonas ${jonas}`);
+
+if (petras > jonas) {
+    console.log('Petrui Valio!')
+} else if (petras < jonas) {
+    console.log('Jonui Valio!')
+} else {
+    console.log('Abiem Valio!')
+}
