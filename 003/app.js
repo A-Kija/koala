@@ -93,7 +93,7 @@ if (autoGreitis <= 90) {
 
 let skaiciusNr1 = rand(1, 3);
 let skaiciusNr2 = rand(1, 3);
-
+// 2 ir 2 rodo neteisingai
 if (skaiciusNr1 + skaiciusNr2 > skaiciusNr1 * skaiciusNr2) {
     console.log('+ daugiau', skaiciusNr1, skaiciusNr2);
 } else {
