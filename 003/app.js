@@ -75,3 +75,16 @@ if (egzaminoPazimys >= 4) {
 } else {
     console.log('Blogai', egzaminoPazimys);
 }
+
+
+let autoGreitis = rand(30, 120);
+
+if (autoGreitis <= 90) {
+    console.log('Normalus greitis', autoGreitis);
+} else {
+    let bauda = (autoGreitis - 90) * 5;
+    console.log(`
+    Greitis yra ${autoGreitis} km/h.
+    Bauda yra ${bauda} eur.
+    `);
+}
