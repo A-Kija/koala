@@ -1,3 +1,5 @@
+'use strict';
+
 function rand(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -87,4 +89,13 @@ if (autoGreitis <= 90) {
     Greitis yra ${autoGreitis} km/h.
     Bauda yra ${bauda} eur.
     `);
+}
+
+let skaiciusNr1 = rand(1, 3);
+let skaiciusNr2 = rand(1, 3);
+
+if (skaiciusNr1 + skaiciusNr2 > skaiciusNr1 * skaiciusNr2) {
+    console.log('+ daugiau', skaiciusNr1, skaiciusNr2);
+} else {
+    console.log('* daugiau', skaiciusNr1, skaiciusNr2);
 }
