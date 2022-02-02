@@ -141,10 +141,16 @@ if (1) {
 console.log(pagrindiniame + salutinis);
 
 
+// if (0) {
+//     console.log('green');
+// } else if (0) {
+//     console.log('blue');
+// } else {
+//     console.log('red');
+// }
+
+
+
 if (0) {
     console.log('green');
-} else if (0) {
-    console.log('blue');
-} else {
-    console.log('red');
 }
