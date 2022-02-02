@@ -23,3 +23,55 @@ if (0) {
 } else {
     console.log('No');
 }
+
+//Comparison operators
+
+
+console.log('3 == 4', 3 == 4);
+console.log('3 == 3', 3 == 3);
+
+console.log('3 > 4', 3 > 4);
+console.log('4 > 3', 4 > 3);
+console.log('4 > 4', 4 > 4);
+
+console.log('3 < 4', 3 < 4);
+console.log('4 < 3', 4 < 3);
+console.log('4 < 4', 4 < 4);
+
+console.log('3 >= 4', 3 >= 4);
+console.log('4 >= 3', 4 >= 3);
+console.log('4 >= 4', 4 >= 4);
+
+console.log('3 <= 4', 3 <= 4);
+console.log('4 <= 3', 4 <= 3);
+console.log('4 <= 4', 4 <= 4);
+
+console.log('3 != 4', 3 != 4);
+console.log('3 != 3', 3 != 3);
+
+console.log('-------------------------------');
+
+console.log('3 == "3"', 3 == '3');
+console.log('1 == true', 1 == true);
+console.log('3 === "3"', 3 === '3');
+console.log('1 === true', 1 === true);
+console.log('3 === 3', 3 === 3);
+
+console.log('3 !== 3', 3 !== 3);
+console.log('3 !== "3"', 3 !== '3');
+
+
+if (13 > 5) {
+    console.log('Jo');
+} else {
+    console.log('Nea');
+}
+
+
+let egzaminoPazimys = rand(1, 10);
+
+if (egzaminoPazimys >= 4) {
+    console.log('Gerai', egzaminoPazimys);
+} else {
+    console.log('Blogai', egzaminoPazimys);
+}
