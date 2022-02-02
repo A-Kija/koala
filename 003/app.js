@@ -99,3 +99,11 @@ if (skaiciusNr1 + skaiciusNr2 > skaiciusNr1 * skaiciusNr2) {
 } else {
     console.log('* daugiau', skaiciusNr1, skaiciusNr2);
 }
+
+if (skaiciusNr1 + skaiciusNr2 > skaiciusNr1 * skaiciusNr2) {
+    console.log('+ daugiau', skaiciusNr1, skaiciusNr2);
+} else if (skaiciusNr1 + skaiciusNr2 == skaiciusNr1 * skaiciusNr2) {
+    console.log('niekas nedaugiau', skaiciusNr1, skaiciusNr2);
+} else {
+    console.log('* daugiau', skaiciusNr1, skaiciusNr2);
+}
