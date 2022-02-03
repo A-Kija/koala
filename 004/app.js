@@ -101,4 +101,84 @@ if (as == tu) {
     } else {
         console.log(tu == 'akmuo' ? 'TU' : 'AS');
     }
+
+}
+
+console.log('------------------- 1 ------------------');
+let kauliukas1 = rand(1, 6);
+let kauliukas2 = rand(1, 6);
+
+if (kauliukas1 + kauliukas2 > 8) {
+    console.log('Laimėjote', kauliukas1, kauliukas2);
+} else {
+    console.log('Pralaimėjote', kauliukas1, kauliukas2);
+}
+
+console.log('------------------- 2 ------------------');
+let pilkis = rand(3, 6);
+let murklys = rand(3, 6);
+
+console.log('Pilkis:', pilkis, 'Murklys:', murklys);
+
+if (pilkis < murklys) {
+    console.log('Pilkis lengvesnis');
+} else if (pilkis > murklys) {
+    console.log('Murklys lengvesnis');
+} else {
+    console.log('Vienodi');
+}
+
+console.log('------------------- 3 ------------------');
+
+let katinukai = rand(0, 30);
+let karves = rand(0, 30);
+
+console.log('katinukai:', katinukai, 'karves:', karves);
+
+if (katinukai > 15 || karves > 15) {
+    console.log('Netelpa');
+} else {
+    console.log('Telpa');
+}
+
+console.log('------------------- 4 ------------------');
+
+let antanas = rand(1, 6);
+console.log('Antanas:', antanas);
+
+if (antanas == 1 || antanas == 5) {
+    console.log('Pirk Televizorių');
+} else if (antanas == 3 || antanas == 4) {
+    console.log('Pirk Skalbimo mašiną');
+} else {
+    console.log('Pirk Šaldytuvas');
+}
+
+console.log('------------------- 5 ------------------');
+
+let sk1 = rand(1, 7);
+let sk2 = rand(1, 7);
+let sk3 = rand(1, 7);
+
+console.log(sk1, sk2, sk3);
+
+if (sk1 <= sk2 && sk1 <= sk3) {
+    if (sk2 <= sk3) {
+        console.log(sk1, sk2, sk3);
+    } else {
+        console.log(sk1, sk3, sk2);
+    }
+
+} else if (sk2 <= sk1 && sk2 <= sk3) {
+    if (sk1 <= sk3) {
+        console.log(sk2, sk1, sk3);
+    } else {
+        console.log(sk2, sk3, sk1);
+    }
+} else {
+    if (sk1 <= sk2) {
+        console.log(sk3, sk1, sk2);
+    } else {
+        console.log(sk3, sk2, sk1);
+    }
 }
