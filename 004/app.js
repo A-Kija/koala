@@ -30,7 +30,7 @@ if (vieta % 2 && vieta <= 100) {
     console.log('Kairė-Apačia');
 } else if (vieta % 2) {
     console.log('Kairė-Viršus');
-} else if (!(vieta % 2) && vieta <= 100) {
+} else if (vieta <= 100) {
     console.log('Dešinė-Apačia');
 } else {
     console.log('Dešinė-Viršus');
