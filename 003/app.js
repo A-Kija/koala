@@ -120,3 +120,20 @@ if (petras > jonas) {
 } else {
     console.log('Abiem Valio!')
 }
+
+let mokslas = rand(1, 4);
+
+if (mokslas == 1 || mokslas == 4) {
+    console.log('Pavyko', mokslas);
+} else {
+    console.log('Nesigavo', mokslas);
+}
+
+let kauliukas1 = rand(1, 6);
+let kauliukas2 = rand(1, 6);
+
+if (kauliukas1 + kauliukas2 > 5 && kauliukas1 == kauliukas2) {
+    console.log('Pasisekė', kauliukas1, kauliukas2);
+} else {
+    console.log('Nieko gero', kauliukas1, kauliukas2);
+}
