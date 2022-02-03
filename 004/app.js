@@ -80,5 +80,25 @@ if (0) {
 
 true ? didMaz++ : didMaz--;
 
-
 console.log(didMaz);
+
+console.log(' ' < 'a');
+console.log(122 < 97);
+
+let as = rand(0, 2) ? (rand(0, 1) ? 'popierius' : 'zirklės') : 'akmuo';
+let tu = rand(0, 2) ? (rand(0, 1) ? 'popierius' : 'zirklės') : 'akmuo';
+// Išvesti as ir tu kintamuosius ir kas laimėjo as ar tu
+
+console.log('as:', as, 'tu:', tu);
+
+if (as == tu) {
+    console.log('Lygiosios')
+} else {
+    if (as == 'popierius') {
+        console.log(tu == 'zirklės' ? 'TU' : 'AS');
+    } else if (as == 'akmuo') {
+        console.log(tu == 'zirklės' ? 'AS' : 'TU');
+    } else {
+        console.log(tu == 'akmuo' ? 'TU' : 'AS');
+    }
+}
