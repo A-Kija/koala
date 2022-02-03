@@ -68,3 +68,17 @@ console.log(letter);
 letter = number == 1 ? 'A' : number == 2 ? 'B' : 'C';
 
 console.log(letter);
+
+
+let didMaz = 5;
+
+if (0) {
+    didMaz++;
+} else {
+    didMaz--;
+}
+
+true ? didMaz++ : didMaz--;
+
+
+console.log(didMaz);
