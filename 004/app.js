@@ -35,3 +35,36 @@ if (vieta % 2 && vieta <= 100) {
 } else {
     console.log('Dešinė-Viršus');
 }
+
+let kokiaSpalva;
+
+console.log(kokiaSpalva);
+
+if (0) {
+    kokiaSpalva = 'Raudona';
+} else {
+    kokiaSpalva = 'Geltona';
+}
+
+console.log(kokiaSpalva);
+
+let katinoVardas;
+
+console.log(katinoVardas);
+
+katinoVardas = (1) ? 'Rudis' : 'Pilkis';
+
+console.log(katinoVardas);
+
+// 1 - A, 2 - B, 3 - C
+
+let number = 3;
+let letter;
+
+console.log(letter);
+
+// letter = (number == 1) ? 'A' : ((number == 2) ? 'B' : 'C');
+
+letter = number == 1 ? 'A' : number == 2 ? 'B' : 'C';
+
+console.log(letter);
