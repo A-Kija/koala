@@ -77,3 +77,18 @@ console.log(cat[0], cat[2], stringoIlgis);
 let cat2 = 'Batuotas Katinas';
 
 console.log(cat2[rand(0, cat2.length - 1)]);
+
+console.log('-------------------------');
+
+// console.log(cat2[0]);
+// console.log(cat2[1]);
+// console.log(cat2[2]);
+// console.log(cat2[3]);
+// console.log(cat2[4]);
+// console.log(cat2[5]);
+// console.log(cat2[6]);
+// console.log(cat2[7]);
+
+for (let i = 0; i < cat2.length; i++) {
+    console.log(cat2[i]);
+}
