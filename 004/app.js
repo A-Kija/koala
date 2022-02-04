@@ -168,7 +168,6 @@ if (sk1 <= sk2 && sk1 <= sk3) {
     } else {
         console.log(sk1, sk3, sk2);
     }
-
 } else if (sk2 <= sk1 && sk2 <= sk3) {
     if (sk1 <= sk3) {
         console.log(sk2, sk1, sk3);
