@@ -104,3 +104,20 @@ for (let i = 0; i < cat2.length; i++) {
 }
 
 console.log(kiekYraAraidziu);
+
+let pirmaA = false;
+let paskutineA = false;
+
+
+for (let i = 0; i < cat2.length; i++) {
+
+    if (cat2[i] == 'a') {
+        paskutineA = i;
+        if (pirmaA === false) {
+            pirmaA = i;
+        }
+    }
+
+}
+
+console.log(pirmaA, paskutineA);
