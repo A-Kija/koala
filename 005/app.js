@@ -49,3 +49,31 @@ for (let i = 0; i < 22; i++) {
 // for (let i = 1; i < 15; i++) {
 //     console.log('Hello Africa', i);
 // }
+
+
+// let x = true;
+// let y = 0;
+
+// if (x = y) {
+//     console.log('Ja');
+// } else {
+//     console.log('No');
+// }
+
+// x = false;
+// y = false;
+
+// if ((x = y)) {
+//     console.log('Ja');
+// } else {
+//     console.log('No');
+// }
+
+let cat = 'Murklys';
+let stringoIlgis = cat.length;
+
+console.log(cat[0], cat[2], stringoIlgis);
+
+let cat2 = 'Batuotas Katinas';
+
+console.log(cat2[rand(0, cat2.length - 1)]);
