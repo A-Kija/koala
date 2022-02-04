@@ -90,5 +90,17 @@ console.log('-------------------------');
 // console.log(cat2[7]);
 
 for (let i = 0; i < cat2.length; i++) {
-    console.log(cat2[i]);
+    let raide = cat2[i];
+    console.log(raide);
 }
+
+let kiekYraAraidziu = 0;
+
+for (let i = 0; i < cat2.length; i++) {
+    let raide = cat2[i];
+    if (raide == 'a') {
+        kiekYraAraidziu++;
+    }
+}
+
+console.log(kiekYraAraidziu);
