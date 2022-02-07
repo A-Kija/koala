@@ -18,3 +18,24 @@ let abcdef = 'ABCDEFHHH';
 for (let i = 0; i < abcdef.length; i++) {
     console.log(abcdef[i]);
 }
+
+console.log('------------------------------');
+
+for (let i = 1; i < 6; i++) {
+    console.log(i * 10);
+}
+
+console.log('------------------------------');
+
+for (let i = 10; i <= 50; i = i + 10) {
+    console.log(i);
+}
+
+console.log('------------------------------');
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 10 == 0) {
+        console.log(i);
+    }
+
+}
