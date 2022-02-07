@@ -108,3 +108,18 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log('67:', _67);
+
+
+let max = 1;
+
+console.log('------------------------------');
+
+for (let i = 0; i < 10; i++) {
+    let randomas = rand(1, 100);
+    if (randomas > max) {
+        max = randomas;
+    }
+    console.log(randomas);
+}
+
+console.log('MAX', max);
