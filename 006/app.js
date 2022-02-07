@@ -93,3 +93,18 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log('TR:', trejetai);
+
+
+console.log('------------------------------');
+let _67 = 0;
+
+for (let i = 0; i < 10; i++) {
+    let kauliukas = rand(1, 6);
+    let kauliukas2 = rand(1, 6);
+    if (kauliukas + kauliukas2 == 6 || kauliukas + kauliukas2 == 7) {
+        _67++;
+    }
+    console.log(kauliukas + kauliukas2);
+}
+
+console.log('67:', _67);
