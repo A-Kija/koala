@@ -97,7 +97,9 @@ for (let i = 0; i < cat2.length; i++) {
 let kiekYraAraidziu = 0;
 
 for (let i = 0; i < cat2.length; i++) {
-    let raide = cat2[i];
+    // let raide = cat2[4]; O 5 raidė
+    // let raide = cat2; 'Batuotas Katinas'
+    let raide = cat2[i]; // 0,1,2,3,4,5,6... dalį stringo, pažymėtą i
     if (raide == 'a') {
         kiekYraAraidziu++;
     }
@@ -105,19 +107,23 @@ for (let i = 0; i < cat2.length; i++) {
 
 console.log(kiekYraAraidziu);
 
-let pirmaA = false;
-let paskutineA = false;
+// ''
 
+let pirmaA = -1;
+let paskutineA = -1;
+let pirmasABuvo = 0; // pirmos a buvimo flag
 
 for (let i = 0; i < cat2.length; i++) {
-
     if (cat2[i] == 'a') {
         paskutineA = i;
-        if (pirmaA === false) {
+        if (pirmasABuvo == 0) {
+            pirmasABuvo = 1;
             pirmaA = i;
         }
     }
-
 }
+
+// pirmaA = 1;
+// paskutineA = 14;
 
 console.log(pirmaA, paskutineA);
