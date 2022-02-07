@@ -80,3 +80,16 @@ for (let i = 15; i >= 1; i--) {
 }
 
 console.log(suma5);
+
+let trejetai = 0;
+
+for (let i = 0; i < 10; i++) {
+
+    let kauliukas = rand(1, 6);
+    if (kauliukas == 3) {
+        trejetai++;
+    }
+    console.log(kauliukas);
+}
+
+console.log('TR:', trejetai);
