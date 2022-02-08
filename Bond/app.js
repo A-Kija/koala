@@ -76,3 +76,12 @@ for (let i = 0; i < 12; i++) {
 
 console.log('kiauliuku suma:', suma5);
 console.log(viso, visoBe3);
+
+
+let pliusai = '';
+
+for (let i = 0; i < 10; i++) {
+    pliusai = pliusai + '+';
+}
+
+console.log(pliusai);
