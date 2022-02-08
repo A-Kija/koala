@@ -102,3 +102,32 @@ for (let k = 0; k < 10; k++) {
     console.log(pliusai);
 
 }
+
+let a = 20;
+console.log(a.toLocaleString('en-US', { minimumIntegerDigits: 2 }));
+
+// be formatavimo
+
+// for (let valandos = 0; valandos < 24; valandos++) {
+
+//     for (let minutes = 0; minutes < 60; minutes = minutes + 15) {
+
+//         console.log(valandos + ':' + minutes);
+
+//     }
+
+// }
+
+
+for (let valandos = 0; valandos < 24; valandos++) {
+
+    for (let minutes = 0; minutes < 60; minutes = minutes + 15) {
+
+        console.log(
+            valandos.toLocaleString('en-US', { minimumIntegerDigits: 2 }) +
+            ':' +
+            minutes.toLocaleString('en-US', { minimumIntegerDigits: 2 }));
+
+    }
+
+}
