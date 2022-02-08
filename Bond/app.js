@@ -123,10 +123,16 @@ for (let valandos = 0; valandos < 24; valandos++) {
 
     for (let minutes = 0; minutes < 60; minutes = minutes + 15) {
 
-        console.log(
-            valandos.toLocaleString('en-US', { minimumIntegerDigits: 2 }) +
-            ':' +
-            minutes.toLocaleString('en-US', { minimumIntegerDigits: 2 }));
+        let formatMin = minutes <= 9 ? '0' + minutes : minutes;
+        let formatVal = valandos <= 9 ? '0' + valandos : valandos;
+
+        console.log(formatVal + ':' + formatMin);
+
+        // console.log(
+        //     valandos.toLocaleString('en-US', { minimumIntegerDigits: 2 }) +
+        //     ':' +
+        //     minutes.toLocaleString('en-US', { minimumIntegerDigits: 2 })
+        //     );
 
     }
 
