@@ -78,18 +78,27 @@ console.log('kiauliuku suma:', suma5);
 console.log(viso, visoBe3);
 
 
-let pliusai = '';
 
-for (let i = 0; i < 10; i++) {
-    pliusai = pliusai + '+';
-}
-
-console.log(pliusai);
 
 
 for (let i = 0; i < 3; i++) {
     console.log('EINA DIDELIS RATAS Nr.', i + 1);
     for (let k = 0; k < 3; k++) {
         console.log('eina mažas ratas Nr.', k + 1);
+        for (let h = 0; h < 3; h++) {
+            console.log('maziukas cikliukas Nr.', h + 1);
+        }
     }
+}
+
+for (let k = 0; k < 10; k++) {
+
+    let pliusai = '';
+
+    for (let i = 0; i < 10; i++) {
+        pliusai = pliusai + '+';
+    }
+
+    console.log(pliusai);
+
 }
