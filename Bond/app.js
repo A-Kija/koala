@@ -54,3 +54,19 @@ for (let i = 0; i < 17; i++) {
 console.log('Suma: ', suma2);
 console.log('Ratu: ', ratuSkaitiklis);
 console.log('Baigta anksciau: ', 17 - ratuSkaitiklis);
+
+
+console.log('-----------------');
+
+let suma5 = 0;
+
+for (let i = 0; i < 12; i++) {
+    let kiauliukas = rand(1, 6);
+    if (kiauliukas == 3) {
+        continue;
+    }
+    console.log(kiauliukas);
+    suma5 = suma5 + kiauliukas;
+}
+
+console.log('kiauliuku suma:', suma5);
