@@ -60,13 +60,19 @@ console.log('-----------------');
 
 let suma5 = 0;
 
+let viso = 0;
+let visoBe3 = 0;
+
 for (let i = 0; i < 12; i++) {
+    viso++;
     let kiauliukas = rand(1, 6);
     if (kiauliukas == 3) {
         continue;
     }
+    visoBe3++;
     console.log(kiauliukas);
     suma5 = suma5 + kiauliukas;
 }
 
 console.log('kiauliuku suma:', suma5);
+console.log(viso, visoBe3);
