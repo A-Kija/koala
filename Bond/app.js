@@ -85,3 +85,11 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(pliusai);
+
+
+for (let i = 0; i < 3; i++) {
+    console.log('EINA DIDELIS RATAS Nr.', i + 1);
+    for (let k = 0; k < 3; k++) {
+        console.log('eina mažas ratas Nr.', k + 1);
+    }
+}
