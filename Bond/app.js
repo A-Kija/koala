@@ -35,3 +35,18 @@ for (let i = 0; i < 5; i++) {
     console.log('sukasi', i);
 
 }
+
+console.log('-----------------');
+
+let suma2 = 0;
+
+for (let i = 0; i < 12; i++) {
+    let kauliukas = rand(1, 6);
+    console.log(kauliukas);
+    if (suma2 + kauliukas > 35) {
+        break;
+    }
+    suma2 = suma2 + kauliukas;
+}
+
+console.log('Suma: ', suma2);
