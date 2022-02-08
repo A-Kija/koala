@@ -108,15 +108,15 @@ console.log(a.toLocaleString('en-US', { minimumIntegerDigits: 2 }));
 
 // be formatavimo
 
-// for (let valandos = 0; valandos < 24; valandos++) {
+for (let valandos = 0; valandos < 24; valandos++) {
 
-//     for (let minutes = 0; minutes < 60; minutes = minutes + 15) {
+    for (let minutes = 0; minutes < 60; minutes = minutes + 15) {
 
-//         console.log(valandos + ':' + minutes);
+        console.log(valandos + ':' + minutes);
 
-//     }
+    }
 
-// }
+}
 
 
 for (let valandos = 0; valandos < 24; valandos++) {
