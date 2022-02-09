@@ -50,3 +50,29 @@ switch (antanas) {
     default:
         console.log('Šaldyklė');
 }
+
+
+// for (let i = 0; i < 3; i++) {
+//     console.log('Valio', i);
+// }
+
+let i = 8;
+while (i < 3) {
+    console.log('Valio', i);
+    i++;
+}
+
+console.log('________________________');
+
+let k = 8;
+do {
+    console.log('Valio', k);
+    k++;
+} while (k < 3);
+
+
+//while nuo 0 iki >>>
+//do while nuo 1 iki >>>
+
+// for naudojamas kai iš anksto yra ŽINOMA kiek ciklų bus
+// while ir do while naudojamas kai iš anksto yra NĖRA ŽINOMA kiek ciklų bus
