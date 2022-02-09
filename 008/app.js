@@ -77,15 +77,17 @@ do {
 // for naudojamas kai iš anksto yra ŽINOMA kiek ciklų bus
 // while ir do while naudojamas kai iš anksto yra NĖRA ŽINOMA kiek ciklų bus
 
+let saugiklis = 0;
 
 let kartai = 0;
 
 
 let iskrito;
 do {
+    if (saugiklis++ > 100) break;
     kartai++;
     iskrito = rand(0, 1); // 0 -> Herbas, 1 -> skaicius
     console.log(iskrito);
-} while (iskrito == 1);
+} while (true);
 
 console.log('KARTAI', kartai);
