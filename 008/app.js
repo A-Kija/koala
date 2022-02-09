@@ -124,6 +124,7 @@ do {
 */
 
 console.log('----------------------');
+
 let _6 = 0;
 
 do {
@@ -134,3 +135,20 @@ do {
         console.log('_');
     }
 } while (_6 != 3);
+
+// for (let i = 0; i < 50; i++) {
+let _666 = 0;
+let kkk = 0;
+do {
+    let kauliukas = rand(1, 6);
+    kkk++;
+    // console.log(kauliukas);
+    if (kauliukas == 6) {
+        _666++;
+    } else {
+        _666 = 0;
+    }
+} while (_666 != 4);
+
+console.log(kkk);
+// }
