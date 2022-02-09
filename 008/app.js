@@ -152,3 +152,20 @@ do {
 
 console.log(kkk);
 // }
+
+
+console.log('----------------------');
+
+
+for (let i = 0; i < 10; i++) {
+
+    let porinisRandomas;
+
+    do {
+        porinisRandomas = rand(100, 300);
+    }
+    while (porinisRandomas % 2);
+
+    console.log(porinisRandomas);
+
+}
