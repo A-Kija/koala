@@ -76,3 +76,16 @@ do {
 
 // for naudojamas kai iš anksto yra ŽINOMA kiek ciklų bus
 // while ir do while naudojamas kai iš anksto yra NĖRA ŽINOMA kiek ciklų bus
+
+
+let kartai = 0;
+
+
+let iskrito;
+do {
+    kartai++;
+    iskrito = rand(0, 1); // 0 -> Herbas, 1 -> skaicius
+    console.log(iskrito);
+} while (iskrito == 1);
+
+console.log('KARTAI', kartai);
