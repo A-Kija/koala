@@ -164,8 +164,15 @@ for (let i = 0; i < 10; i++) {
     do {
         porinisRandomas = rand(100, 300);
     }
-    while (porinisRandomas % 2);
+    // while (!(porinisRandomas % 2));
+    while (porinisRandomas % 2 == 0);
 
     console.log(porinisRandomas);
 
 }
+
+// porinis (sk % 2 == 0) ===> false
+// neporinis (sk % 2 == 1) ===> true
+
+
+// rezultas 24 % 2 = 0 ===> false
