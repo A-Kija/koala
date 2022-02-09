@@ -104,3 +104,21 @@ do {
 } while (kauliukuSuma <= 21);
 
 console.log('REZ:', kauliukuSuma, kiekKartu);
+
+
+let kiauliukas;
+
+do {
+    kiauliukas = rand(1, 6);
+} while (kiauliukas != 1 && kiauliukas != 4);
+
+/*
+== -> !=
+=! -> ==
+< -> >=
+> -> <=
+<= -> >
+>= -> <
+|| -> &&
+&& -> ||
+*/
