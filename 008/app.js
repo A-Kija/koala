@@ -122,3 +122,15 @@ do {
 || -> &&
 && -> ||
 */
+
+console.log('----------------------');
+let _6 = 0;
+
+do {
+    let kauliukas = rand(1, 6);
+    console.log(kauliukas);
+    if (kauliukas == 6) {
+        _6++;
+        console.log('_');
+    }
+} while (_6 != 3);
