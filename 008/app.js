@@ -88,6 +88,19 @@ do {
     kartai++;
     iskrito = rand(0, 1); // 0 -> Herbas, 1 -> skaicius
     console.log(iskrito);
-} while (true);
+} while (iskrito == 1);
 
 console.log('KARTAI', kartai);
+
+
+let kiekKartu = 0;
+let kauliukuSuma = 0;
+
+do {
+    let kauliukas = rand(1, 6);
+    console.log(kauliukas);
+    kauliukuSuma = kauliukuSuma + kauliukas;
+    kiekKartu++;
+} while (kauliukuSuma <= 21);
+
+console.log('REZ:', kauliukuSuma, kiekKartu);
