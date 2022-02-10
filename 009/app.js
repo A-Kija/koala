@@ -106,3 +106,19 @@ for (let i = 1; i < arrayAB.length; i++) {
 }
 
 console.log(arrayA, arrayB, arrayC);
+
+
+const arrayABC = [];
+
+for (let i = 0; i < 5; i++) {
+    arrayABC.push('A');
+}
+console.table(arrayABC);
+for (let i = 0; i < 5; i++) {
+    arrayABC.unshift('B');
+}
+console.table(arrayABC);
+for (let i = 0; i < 5; i++) {
+    arrayABC.push('C');
+}
+console.table(arrayABC);
