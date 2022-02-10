@@ -121,4 +121,11 @@ console.table(arrayABC);
 for (let i = 0; i < 5; i++) {
     arrayABC.push('C');
 }
+
+
+for (let i = 0; i < 3; i++) {
+    arrayABC.pop();
+    arrayABC.shift();
+}
+
 console.table(arrayABC);
