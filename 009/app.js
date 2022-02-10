@@ -77,4 +77,15 @@ for (let i = 0; i < 33; i++) {
     arrayAB.push(ab);
 }
 
-console.log(arrayAB);
+console.table(arrayAB);
+
+
+for (let i = 1; i < arrayAB.length; i++) {
+
+    if (arrayAB[i] == 'A' && arrayAB[i - 1] == 'B') {
+        arrayAB[i] = 'C';
+    }
+
+}
+
+console.table(arrayAB);
