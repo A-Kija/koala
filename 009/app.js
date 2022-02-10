@@ -77,7 +77,7 @@ for (let i = 0; i < 33; i++) {
     arrayAB.push(ab);
 }
 
-console.table(arrayAB);
+// console.table(arrayAB);
 
 
 for (let i = 1; i < arrayAB.length; i++) {
@@ -88,4 +88,21 @@ for (let i = 1; i < arrayAB.length; i++) {
 
 }
 
-console.table(arrayAB);
+// console.table(arrayAB);
+
+const arrayA = [];
+const arrayB = [];
+const arrayC = [];
+
+for (let i = 1; i < arrayAB.length; i++) {
+
+    if (arrayAB[i] == 'A') {
+        arrayA.push('A');
+    } else if (arrayAB[i] == 'B') {
+        arrayB.push('B');
+    } else {
+        arrayC.push('C');
+    }
+}
+
+console.log(arrayA, arrayB, arrayC);
