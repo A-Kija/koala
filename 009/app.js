@@ -38,3 +38,13 @@ for (let i = 0; i < cats.length; i++) {
 for (let i = 0; i < cats.length; i++) {
     console.log(cats[i][0]);
 }
+
+const digits = [5, 8, 9, 45, 13, 78, 9, 10];
+
+let digitsSum = 0;
+
+for (let i = 0; i < digits.length; i++) {
+    digitsSum = digitsSum + digits[i];
+}
+
+console.log(digitsSum);
