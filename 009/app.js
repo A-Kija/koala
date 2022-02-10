@@ -64,7 +64,17 @@ console.log(namas);
 const newArray = [];
 
 for (let i = 0; i < 20; i++) {
-    newArray.push(rand(1, 6));
+    let randomas = rand(1, 6);
+    newArray.push(randomas);
 }
 
 console.log(newArray);
+
+const arrayAB = [];
+
+for (let i = 0; i < 33; i++) {
+    const ab = rand(0, 1) ? 'A' : 'B';
+    arrayAB.push(ab);
+}
+
+console.log(arrayAB);
