@@ -28,3 +28,13 @@ console.log(namas);
 for (let i = 0; i < namas.length; i++) {
     console.log(namas[i]);
 }
+
+const cats = ['Pilkis', 'Murka', 'Keris', 'Ūkas'];
+
+for (let i = 0; i < cats.length; i++) {
+    console.log(cats[i]);
+}
+
+for (let i = 0; i < cats.length; i++) {
+    console.log(cats[i][0]);
+}
