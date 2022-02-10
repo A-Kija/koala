@@ -23,7 +23,7 @@ namas[6] = true;
 
 namas[7] = [1, 2, 3];
 
-console.log(namas);
+
 
 for (let i = 0; i < namas.length; i++) {
     console.log(namas[i]);
@@ -48,3 +48,23 @@ for (let i = 0; i < digits.length; i++) {
 }
 
 console.log(digitsSum);
+
+// Pristatymas ant virsaus
+namas.push('Krokodilas');
+
+// Pristatymas is apacios
+namas.unshift('Zuikis');
+
+
+
+
+console.log(namas);
+
+
+const newArray = [];
+
+for (let i = 0; i < 20; i++) {
+    newArray.push(rand(1, 6));
+}
+
+console.log(newArray);
