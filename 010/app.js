@@ -81,3 +81,17 @@ do {
     console.log(kengura, stabdziai, vairas);
 
 } while (!kengura || !stabdziai || !vairas);
+
+
+
+console.log('********************************');
+
+const katinukas = [];
+
+for (let i = 0; i < 10; i++) {
+    katinukas.push('');
+}
+
+katinukas[rand(0, 9)] = 'Katinukas';
+
+console.log(katinukas);
