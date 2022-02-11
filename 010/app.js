@@ -139,4 +139,17 @@ for (let i = 0; i < 5; i++) {
     catsVsRand.push(rand(6, 26));
 }
 
-console.log(catsVsRand);
+console.table(catsVsRand);
+
+
+let sumaRand = 0;
+
+for (let i = 0; i < 5; i++) {
+    catsVsRand.shift();
+    sumaRand += catsVsRand.shift();
+    // console.log(catsVsRand.shift());
+    // skaicius = skaicius + 8;
+    // skaicius += 8;
+}
+
+console.log(sumaRand);
