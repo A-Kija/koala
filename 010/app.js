@@ -129,3 +129,14 @@ do {
 } while (A / B < 2)
 
 console.log(AB);
+
+console.log('********************************');
+
+const catsVsRand = [];
+
+for (let i = 0; i < 5; i++) {
+    catsVsRand.push('Katinukas');
+    catsVsRand.push(rand(6, 26));
+}
+
+console.log(catsVsRand);
