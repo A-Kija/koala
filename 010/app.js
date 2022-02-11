@@ -103,3 +103,29 @@ for (let i = 0; i < katinukas.length; i++) {
         break;
     }
 }
+
+// Sunkesnė. Masyvo 33 elementai pagal A ir B kūrimas,
+// bet gautame masyve turi būti B raidžių bent
+// dvigubai daugiau nei A
+
+let AB;
+let A;
+let B;
+do {
+
+    AB = [];
+
+    for (let i = 0; i < 33; i++) {
+        AB.push(rand(0, 1) ? 'A' : 'B');
+    }
+
+    A = 0;
+    B = 0;
+
+    for (let i = 0; i < AB.length; i++) {
+        AB[i] == 'A' ? A++ : B++;
+    }
+
+} while (A / B < 2)
+
+console.log(AB);
