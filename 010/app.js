@@ -95,3 +95,11 @@ for (let i = 0; i < 10; i++) {
 katinukas[rand(0, 9)] = 'Katinukas';
 
 console.log(katinukas);
+
+
+for (let i = 0; i < katinukas.length; i++) {
+    if (katinukas[i] == 'Katinukas') {
+        console.log('Vieta: ', i);
+        break;
+    }
+}
