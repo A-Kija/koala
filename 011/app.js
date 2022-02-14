@@ -51,3 +51,20 @@ for (let i = 0; i < 3; i++) {
 }
 
 console.log(_3X3);
+
+
+const XO = [];
+
+
+for (let i = 0; i < 3; i++) {
+
+    const _3 = [];
+    for (let k = 0; k < 3; k++) {
+        _3.push(rand(0, 1) ? 'X' : 'O');
+    }
+
+    XO.push(_3);
+
+}
+
+console.table(XO);
