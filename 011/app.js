@@ -81,7 +81,6 @@ _3X3[1][1] = 'Katinukas';
 
 
 
-
 for (let i = 0; i < _3X3.length; i++) {
     for (let k = 0; k < _3X3[i].length; k++) {
         if (_3X3[i][k] == 'Nauseda')
@@ -90,5 +89,22 @@ for (let i = 0; i < _3X3.length; i++) {
 }
 
 
-
 console.table(_3X3);
+
+
+const cats = ['Murka', 'Rainis', 'Pilkis', 'Kniauklys', 'Miauksius', 'Kakorius'];
+
+
+const allCats = [];
+
+for (let i = 0; i < cats.length; i++) {
+    const catName = cats[i];
+    // console.log(catName);
+    const oneCat = [];
+    oneCat.push(catName);
+    oneCat.push(rand(3, 7));
+    console.log(oneCat);
+
+    allCats.push(oneCat);
+}
+console.table(allCats);
