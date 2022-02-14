@@ -68,3 +68,10 @@ for (let i = 0; i < 3; i++) {
 }
 
 console.table(XO);
+
+if ((XO[1][1] == XO[0][0] && XO[1][1] == XO[2][2]) ||
+    (XO[1][1] == XO[2][0] && XO[1][1] == XO[0][2])) {
+    console.log('Laimėjo', XO[1][1]);
+} else {
+    console.log('Niekas nelaimėjo');
+}
