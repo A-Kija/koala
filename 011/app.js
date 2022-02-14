@@ -77,5 +77,6 @@ if ((XO[1][1] == XO[0][0] && XO[1][1] == XO[2][2]) ||
 }
 
 _3X3[rand(0, 2)][rand(0, 2)] = 'Nauseda';
+_3X3[1][1] = 'Katinukas';
 
 console.table(_3X3);
