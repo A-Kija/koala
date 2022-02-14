@@ -50,7 +50,7 @@ for (let i = 0; i < 3; i++) {
 
 }
 
-console.log(_3X3);
+
 
 
 const XO = [];
@@ -75,3 +75,7 @@ if ((XO[1][1] == XO[0][0] && XO[1][1] == XO[2][2]) ||
 } else {
     console.log('Niekas nelaimėjo');
 }
+
+_3X3[rand(0, 2)][rand(0, 2)] = 'Nauseda';
+
+console.table(_3X3);
