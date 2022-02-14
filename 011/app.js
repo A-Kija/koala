@@ -79,4 +79,16 @@ if ((XO[1][1] == XO[0][0] && XO[1][1] == XO[2][2]) ||
 _3X3[rand(0, 2)][rand(0, 2)] = 'Nauseda';
 _3X3[1][1] = 'Katinukas';
 
+
+
+
+for (let i = 0; i < _3X3.length; i++) {
+    for (let k = 0; k < _3X3[i].length; k++) {
+        if (_3X3[i][k] == 'Nauseda')
+            console.log(i, k);
+    }
+}
+
+
+
 console.table(_3X3);
