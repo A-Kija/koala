@@ -77,4 +77,4 @@ const mas = function(c) {
     return m;
 }
 
-console.log(mas(22));
+console.log(mas(2));
