@@ -31,3 +31,23 @@ dviejuSkaiciuSuma(5, 5);
 dviejuSkaiciuSuma(11, 12);
 
 // k[0](4, 6);
+
+
+
+const linija = function(m = '-') {
+    let X10 = '';
+    for (let i = 0; i < 10; i++) {
+        X10 = X10 + m;
+    }
+    return X10;
+}
+
+// linija();
+// linija();
+// linija();
+// linija();
+// linija('*');
+
+const lin = linija('=^_^= ');
+
+console.log(lin);
