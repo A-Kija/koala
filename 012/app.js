@@ -51,3 +51,13 @@ const linija = function(m = '-') {
 const lin = linija('=^_^= ');
 
 console.log(lin);
+
+const calc = function(a, b, z) {
+    if (z == '+') {
+        return a + b;
+    }
+    return a * b;
+}
+
+console.log(calc(1, 2, '+'));
+console.log(calc(1, 2, '*'));
