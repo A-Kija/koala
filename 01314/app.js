@@ -135,13 +135,15 @@ m10.forEach(s => {
 
 
 let m10Min = 11;
+let m10MinPlace = 0;
 
-m10.forEach(s => {
+m10.forEach((s, i) => {
     if (s < m10Min) {
         m10Min = s;
+        m10MinPlace = i;
     }
 })
 
 console.log(m10);
 console.log(m10Sum);
-console.log(m10Min);
+console.log(m10Min, m10MinPlace);
