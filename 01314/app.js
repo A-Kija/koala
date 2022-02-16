@@ -44,7 +44,4 @@ const line = l => {
     return returnStr;
 }
 
-
-
-
 console.log(line(4));
