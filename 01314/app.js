@@ -142,8 +142,15 @@ m10.forEach((s, i) => {
         m10Min = s;
         m10MinPlace = i;
     }
-})
+});
+
+
+let m10Place5 = -1;
+
+m10.forEach((s, i) => m10Place5 = s == 5 ? i : m10Place5);
+
 
 console.log(m10);
 console.log(m10Sum);
 console.log(m10Min, m10MinPlace);
+console.log(m10Place5);
