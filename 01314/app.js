@@ -155,6 +155,15 @@ m10.forEach((s, i) => {
 });
 
 
+// girls.sort((a, b) => {
+//     if (a > b) {
+//         return -1;
+//     }
+//     if (a < b) {
+//         return 1;
+//     }
+//     return 0;
+// });
 
 // const g = girls.map(g => [g, rand(45, 95), !rand(0, 1)]);
 
@@ -169,25 +178,25 @@ for (let i = 0; i < girls.length; i++) {
     g.push(oneGirl);
 }
 
-
-
-
 console.table(g);
 
 
 
-girls.sort((a, b) => {
-    if (a > b) {
-        return -1;
-    }
-    if (a < b) {
+// g.sort((a, b) => b[1] - a[1]);
+
+g.sort((a, b) => {
+    if (a[0] > b[0]) {
         return 1;
+    }
+    if (a[0] < b[0]) {
+        return -1;
     }
     return 0;
 });
 
 
-console.table(girls);
+
+console.table(g);
 
 
 
