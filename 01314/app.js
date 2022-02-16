@@ -88,5 +88,18 @@ const skaiciuoti = (a, b, v) => {
     return rezultatas;
 }
 
+console.log(skaiciuoti(18, 5, (a, b) => a % b));
 
-console.log(skaiciuoti(4, 5, daugyba))
+// const print = () => {
+//     console.log(aPlus());
+// }
+
+
+
+setInterval(() => {
+    console.log('!@#$%^&*' [rand(0, 7)]);
+}, 1000);
+
+setInterval(() => {
+    console.log('12345678' [rand(0, 7)]);
+}, 1000);
