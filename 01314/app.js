@@ -64,7 +64,11 @@ const fancyLine = (l, f) => {
     return returnStr;
 }
 
-console.log(fancyLine(10, _123));
+console.log(fancyLine(10, () => {
+    const word = '/*-+';
+    const random = rand(0, word.length - 1);
+    return word[random];
+}));
 
 
 // console.log(fancyLine(10, aPlus));
