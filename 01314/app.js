@@ -96,10 +96,33 @@ console.log(skaiciuoti(18, 5, (a, b) => a % b));
 
 
 
-setInterval(() => {
-    console.log('!@#$%^&*' [rand(0, 7)]);
-}, 1000);
+// setInterval(() => {
+//     console.log('!@#$%^&*' [rand(0, 7)]);
+// }, 1000);
 
-setInterval(() => {
-    console.log('12345678' [rand(0, 7)]);
-}, 1000);
+// setInterval(() => {
+//     console.log('12345678' [rand(0, 7)]);
+// }, 1000);
+
+
+const girls = ['Lina', 'Birutė', 'Justė', 'Brigita', 'Deimantė'];
+
+
+// for (let i = 0; i < girls.length; i++) {
+//     console.log(girls[i]);
+// }
+
+const printGirl = (girl) => {
+    console.log(girl)
+}
+
+
+// girls.forEach(i => console.log(i));
+// girls.forEach(printGirl);
+
+const m10 = [];
+for (let i = 0; i < 10; i++) {
+    m10.push(rand(0, 11));
+}
+
+console.log(m10);
