@@ -125,4 +125,11 @@ for (let i = 0; i < 10; i++) {
     m10.push(rand(0, 11));
 }
 
+
+
+let m10Sum = 0;
+
+m10.forEach(s => m10Sum = m10Sum + s);
+
 console.log(m10);
+console.log(m10Sum);
