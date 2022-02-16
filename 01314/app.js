@@ -150,7 +150,23 @@ let m10Place5 = -1;
 m10.forEach((s, i) => m10Place5 = s == 5 ? i : m10Place5);
 
 
-console.log(m10);
-console.log(m10Sum);
-console.log(m10Min, m10MinPlace);
-console.log(m10Place5);
+console.table(girls);
+
+girls.sort((a, b) => {
+    if (a > b) {
+        return -1;
+    }
+    if (a < b) {
+        return 1;
+    }
+    return 0;
+});
+
+
+
+
+console.table(girls);
+
+// console.log(m10Sum);
+// console.log(m10Min, m10MinPlace);
+// console.log(m10Place5);
