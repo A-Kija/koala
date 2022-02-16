@@ -129,7 +129,19 @@ for (let i = 0; i < 10; i++) {
 
 let m10Sum = 0;
 
-m10.forEach(s => m10Sum = m10Sum + s);
+m10.forEach(s => {
+    m10Sum = m10Sum + s;
+});
+
+
+let m10Min = 11;
+
+m10.forEach(s => {
+    if (s < m10Min) {
+        m10Min = s;
+    }
+})
 
 console.log(m10);
 console.log(m10Sum);
+console.log(m10Min);
