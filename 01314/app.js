@@ -32,6 +32,12 @@ const az = () => {
     return word[random];
 }
 
+const aPlus = () => {
+    const word = 'ąčęėįšųūž';
+    const random = rand(0, word.length - 1);
+    return word[random];
+}
+
 console.log(abcdz());
 
 
@@ -44,4 +50,12 @@ const line = l => {
     return returnStr;
 }
 
-console.log(line(4));
+const fancyLine = (l, f) => {
+    let returnStr = '';
+    for (let i = 0; i < l; i++) {
+        returnStr = returnStr + f();
+    }
+    return returnStr;
+}
+
+console.log(fancyLine(10, aPlus));
