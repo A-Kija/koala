@@ -38,6 +38,12 @@ const aPlus = () => {
     return word[random];
 }
 
+const _123 = () => {
+    const word = '0123456789';
+    const random = rand(0, word.length - 1);
+    return word[random];
+}
+
 console.log(abcdz());
 
 
@@ -58,6 +64,25 @@ const fancyLine = (l, f) => {
     return returnStr;
 }
 
-console.log(fancyLine(10, az));
-console.log(fancyLine(10, aPlus));
-console.log(fancyLine(10, abcdz));
+console.log(fancyLine(10, _123));
+
+
+// console.log(fancyLine(10, aPlus));
+// console.log(fancyLine(10, abcdz));
+
+
+const suma = (a, b) => a + b;
+const skirtumas = (a, b) => a - b;
+const daugyba = (a, b) => a * b;
+const dalyba = (a, b) => a / b;
+
+// const skaiciuoti = (a, b, v) => v(a, b);
+
+const skaiciuoti = (a, b, v) => {
+    let rezultatas;
+    rezultatas = v(a, b);
+    return rezultatas;
+}
+
+
+console.log(skaiciuoti(4, 5, daugyba))
