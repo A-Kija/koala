@@ -145,27 +145,33 @@ m10.forEach((s, i) => {
 });
 
 
-let m10Place5 = -1;
+let m10Place5 = [];
 
-m10.forEach((s, i) => m10Place5 = s == 5 ? i : m10Place5);
-
-
-console.table(girls);
-
-girls.sort((a, b) => {
-    if (a > b) {
-        return -1;
+console.table(m10);
+m10.forEach((s, i) => {
+    if (s == 5) {
+        m10Place5.push(i);
     }
-    if (a < b) {
-        return 1;
-    }
-    return 0;
 });
 
+console.table(m10Place5);
 
 
 
-console.table(girls);
+// girls.sort((a, b) => {
+//     if (a > b) {
+//         return -1;
+//     }
+//     if (a < b) {
+//         return 1;
+//     }
+//     return 0;
+// });
+
+
+
+
+// console.table(girls);
 
 // console.log(m10Sum);
 // console.log(m10Min, m10MinPlace);
