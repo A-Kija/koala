@@ -154,24 +154,43 @@ m10.forEach((s, i) => {
     }
 });
 
-console.table(m10Place5);
+
+
+// const g = girls.map(g => [g, rand(45, 95), !rand(0, 1)]);
+
+
+const g = [];
+
+for (let i = 0; i < girls.length; i++) {
+    const oneGirl = [];
+    oneGirl.push(girls[i]);
+    oneGirl.push(rand(45, 95));
+    oneGirl.push(rand(0, 1) ? 'soka' : 'nemoka');
+    g.push(oneGirl);
+}
 
 
 
-// girls.sort((a, b) => {
-//     if (a > b) {
-//         return -1;
-//     }
-//     if (a < b) {
-//         return 1;
-//     }
-//     return 0;
-// });
+
+console.table(g);
 
 
 
+girls.sort((a, b) => {
+    if (a > b) {
+        return -1;
+    }
+    if (a < b) {
+        return 1;
+    }
+    return 0;
+});
 
-// console.table(girls);
+
+console.table(girls);
+
+
+
 
 // console.log(m10Sum);
 // console.log(m10Min, m10MinPlace);
