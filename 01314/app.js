@@ -58,4 +58,6 @@ const fancyLine = (l, f) => {
     return returnStr;
 }
 
+console.log(fancyLine(10, az));
 console.log(fancyLine(10, aPlus));
+console.log(fancyLine(10, abcdz));
