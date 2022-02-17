@@ -56,9 +56,13 @@ console.log('******************* 5 ******************');
 
 const happyCats = [];
 
+const bitCatsCopy = bitCats.slice(); // Kopijavimas
+
 bitGirls.forEach(girl => {
-    const cat = girl == 'Nausėda' ? 'Bebras' : bitCats.shift()[0];
-    happyCats.push([girl, cat]);
+    const catName = (girl == 'Nausėda') ? 'Bebras' : bitCatsCopy.shift()[0];
+    happyCats.push([girl, catName]);
 });
 
 console.table(happyCats);
+
+console.log(bitCats);
