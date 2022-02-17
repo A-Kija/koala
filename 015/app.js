@@ -107,4 +107,26 @@ for (let i = 0; i < 22; i++) {
 
 }
 
+petClinic.sort((a, b) => {
+    if (a.girl > b.girl) {
+        return 1;
+    }
+    if (a.girl < b.girl) {
+        return -1;
+    }
+    return 0;
+});
+
 console.log(petClinic);
+
+let blueCount = 0;
+
+// petClinic.forEach(o => o.pills.blue ? blueCount++ : 'tik tam, kad nebutu tuscia')
+
+petClinic.forEach(o => {
+    if (o.pills.blue) {
+        blueCount++;
+    }
+});
+
+console.log(blueCount);
