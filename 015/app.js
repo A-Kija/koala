@@ -89,3 +89,22 @@ catOwner.pills.red = !rand(0, 1);
 catOwner.pills.blue = !rand(0, 1);
 
 console.log(catOwner);
+
+
+
+const petClinic = [];
+
+for (let i = 0; i < 22; i++) {
+
+    petClinic[i] = {};
+    petClinic[i].girl = bitGirls[rand(0, bitGirls.length - 1)];
+    petClinic[i].cat = cats[rand(0, cats.length - 1)];
+
+    petClinic[i].pills = {};
+
+    petClinic[i].pills.red = !rand(0, 1);
+    petClinic[i].pills.blue = !rand(0, 1);
+
+}
+
+console.log(petClinic);
