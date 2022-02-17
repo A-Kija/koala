@@ -1,0 +1,64 @@
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+const bitGirls = ['Edita', 'Lina', 'Brigita', 'Deimantė', 'Justė'];
+const cats = ['Murka', 'Rainius', 'Meilutė', 'Bosas', 'Dičkis'];
+
+console.log('******************* 1 ******************');
+bitGirls.unshift('Nausėda');
+console.log(bitGirls);
+
+console.log('******************* 2 ******************');
+
+const bitCats = [];
+
+cats.forEach(cat => {
+    const oneCat = [];
+    oneCat.push(cat);
+    oneCat.push(rand(0, 1) ? 'Storas' : 'Normalus');
+    bitCats.push(oneCat);
+});
+console.table(bitCats);
+
+console.log('******************* 3 ******************');
+
+let storas = 0;
+let normalus = 0;
+
+bitCats.forEach(cat => {
+    if (cat[1] == 'Storas') {
+        storas++;
+    } else if (cat[1] == 'Normalus') {
+        normalus++;
+    }
+});
+
+console.log('Stori:', storas, 'Normalūs:', normalus);
+
+
+console.log('******************* 4 ******************');
+
+bitCats.sort((a, b) => {
+    if (a[0][1] > b[0][1]) {
+        return 1;
+    }
+    if (a[0][1] < b[0][1]) {
+        return -1;
+    }
+    return 0;
+});
+
+console.table(bitCats);
+
+console.log('******************* 5 ******************');
+
+const happyCats = [];
+
+bitGirls.forEach(girl => {
+    const cat = girl == 'Nausėda' ? 'Bebras' : bitCats.shift()[0];
+    happyCats.push([girl, cat]);
+});
+
+console.table(happyCats);
