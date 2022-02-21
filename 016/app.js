@@ -36,5 +36,9 @@ cow.style.border = '13px dotted black';
 cow.style.borderColor = 'pink';
 
 setInterval(() => {
-    console.log('m8')
+    if (cow.style.background == 'green') {
+        cow.style.background = 'pink';
+    } else {
+        cow.style.background = 'green';
+    }
 }, 1000);
