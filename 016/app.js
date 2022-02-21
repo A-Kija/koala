@@ -51,10 +51,13 @@ setInterval(() => {
 
     ball.innerText = ++ballCounter;
 
+
     if (ball.style.left == '0px') {
         ball.style.left = rand(100, 550) + 'px';
     } else {
         ball.style.left = '0px';
     }
+
+    ball.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
 
 }, 1000);
