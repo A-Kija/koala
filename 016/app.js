@@ -5,8 +5,25 @@ function rand(min, max) {
 }
 
 
-console.log(document.querySelector('h1'));
+
 
 console.log(document.querySelector('div div'));
 
 console.log(document.querySelector('.au-au'));
+
+console.log(document.querySelector('div[name=mu-mu]'));
+
+console.log(document.querySelector('div[type=rabit]'));
+
+console.log(document.querySelector('div[type=rabit] + div'));
+
+
+const cat = document.querySelector('h1');
+
+cat.style.color = 'pink';
+
+document.querySelector('.au-au').style.color = 'brown';
+
+document.querySelector('.au-au').style.fontSize = '40px'; // font-size
+
+// console.log(cat);
