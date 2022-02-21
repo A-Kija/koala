@@ -130,3 +130,16 @@ petClinic.forEach(o => {
 });
 
 console.log(blueCount);
+
+const do0g = {};
+
+do0g.name = 'Bobokas';
+do0g.tail = true;
+
+do0g.voice = () => {
+    console.log('Aūū Aūū');
+}
+
+console.log(do0g);
+
+do0g.voice();
