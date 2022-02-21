@@ -19,4 +19,7 @@
     top: 75px;
     left: 0;
     transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

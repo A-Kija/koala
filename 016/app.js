@@ -46,10 +46,15 @@ cow.innerText = 'Begemotas';
 // }, 1000);
 
 const ball = document.querySelector('.ball');
+let ballCounter = 0;
 setInterval(() => {
+
+    ball.innerText = ++ballCounter;
+
     if (ball.style.left == '0px') {
-        ball.style.left = '550px';
+        ball.style.left = rand(100, 550) + 'px';
     } else {
         ball.style.left = '0px';
     }
+
 }, 1000);
