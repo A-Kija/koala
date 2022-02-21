@@ -27,3 +27,14 @@ document.querySelector('.au-au').style.color = 'brown';
 document.querySelector('.au-au').style.fontSize = '40px'; // font-size
 
 // console.log(cat);
+
+const cow = document.querySelector('div[name=mu-mu]');
+
+cow.style.background = 'green';
+cow.style.padding = '100px';
+cow.style.border = '13px dotted black';
+cow.style.borderColor = 'pink';
+
+setInterval(() => {
+    console.log('m8')
+}, 500);
