@@ -35,10 +35,20 @@ cow.style.padding = '100px';
 cow.style.border = '13px dotted black';
 cow.style.borderColor = 'pink';
 
-setInterval(() => {
-    if (cow.style.background == 'green') {
-        cow.style.background = 'pink';
-    } else {
-        cow.style.background = 'green';
-    }
-}, 1000);
+// setInterval(() => {
+//     if (cow.style.background == 'green') {
+//         cow.style.background = 'pink';
+//     } else {
+//         cow.style.background = 'green';
+//     }
+// }, 1000);
+
+// const ball = document.querySelector('.ball');
+// setInterval(() => {
+//     // if (ball.style.left == '0px') {
+//     //     ball.style.left = rand(100, 550) + 'px';
+//     // } else {
+//     //     ball.style.left = '0px';
+//     // }
+//     ball.style.left = rand(0, 550) + 'px';
+// }, 1000);

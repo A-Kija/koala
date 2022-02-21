@@ -1,3 +1,22 @@
 [name="mu-mu"] {
     transition: all 1s;
 }
+
+.field {
+    width: 600px;
+    height: 200px;
+    background: pink;
+    border: 1px solid aqua;
+    position: relative;
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background: aqua;
+    border-radius: 50%;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    transition: all 1s;
+}
