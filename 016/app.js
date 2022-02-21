@@ -37,4 +37,4 @@ cow.style.borderColor = 'pink';
 
 setInterval(() => {
     console.log('m8')
-}, 500);
+}, 1000);
