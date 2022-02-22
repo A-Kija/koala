@@ -1,3 +1,10 @@
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
 // Main
 const cat = document.querySelector('div');
 const dog = document.querySelector('div + div');
@@ -100,3 +107,18 @@ const trysServizai = `
 `;
 
 sekcija.innerHTML = trysServizai;
+
+
+const sectionR = document.querySelector('.random');
+
+let rHtml;
+
+rHtml = '<ul>';
+
+for (let i = 0; i < 22; i++) {
+    rHtml = rHtml + '<li>' + rand(100, 999) + '</li>';
+}
+
+rHtml = rHtml + '</ul>';
+
+sectionR.innerHTML = rHtml;
