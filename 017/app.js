@@ -62,5 +62,23 @@ setInterval(() => { // end main
     })
 }, 100);
 
+const bigNames = [];
 
-console.log(clowns);
+clowns.forEach(c => bigNames.push(c.innerText));
+
+bigNames.sort((a, b) => {
+    if (a > b) {
+        return -1;
+    }
+    if (a < b) {
+        return 1;
+    }
+    return 0;
+})
+
+// clowns.forEach((c) => {
+//     bigNames.push(c)
+// });
+
+
+console.log(bigNames);
