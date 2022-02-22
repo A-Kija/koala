@@ -30,4 +30,17 @@ setInterval(() => { // end main
 
 const clowns = document.querySelectorAll('li');
 
+// clowns.style.color = 'pink'; nieko taip nebus
+
+// for (let i = 0; i < clowns.length; i++) {
+//     clowns[i].style.color = 'pink';
+// }
+
+clowns.forEach(c => c.style.color = 'pink');
+
+// clowns.forEach((c) => {
+//     c.style.color = 'pink'
+// });
+
+
 console.log(clowns);
