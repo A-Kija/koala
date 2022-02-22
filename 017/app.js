@@ -27,3 +27,7 @@ setInterval(() => { // end main
     // racoon end
 
 }, 300); // main
+
+const clowns = document.querySelectorAll('li');
+
+console.log(clowns);
