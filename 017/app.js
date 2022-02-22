@@ -45,6 +45,7 @@ clowns.forEach((c, i) => c.style.color = 'pink');
 clowns.forEach((c, i) => {
     if (i % 2) {
         c.style.color = 'red';
+        console.log(c.innerText);
     }
 })
 
