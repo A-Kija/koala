@@ -36,11 +36,17 @@ const clowns = document.querySelectorAll('li');
 //     clowns[i].style.color = 'pink';
 // }
 
-clowns.forEach(c => c.style.color = 'pink');
+clowns.forEach((c, i) => c.style.color = 'pink');
 
 // clowns.forEach((c) => {
 //     c.style.color = 'pink'
 // });
+
+clowns.forEach((c, i) => {
+    if (i % 2) {
+        c.style.color = 'red';
+    }
+})
 
 
 console.log(clowns);
