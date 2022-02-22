@@ -82,3 +82,9 @@ bigNames.sort((a, b) => {
 
 
 console.log(bigNames);
+
+const day = document.querySelector('.day');
+
+const dayHtml = '<h2>Big Day</h2>';
+
+day.innerHTML = dayHtml;
