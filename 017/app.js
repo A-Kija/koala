@@ -88,3 +88,15 @@ const day = document.querySelector('.day');
 const dayHtml = '<h2>Big Day</h2>';
 
 day.innerHTML = dayHtml;
+
+const sekcija = document.querySelector('section');
+
+const trysServizai = `
+<ul>
+    <li>Servizas</li>
+    <li>Servizas</li>
+    <li>Servizas</li>
+</ul>
+`;
+
+sekcija.innerHTML = trysServizai;
