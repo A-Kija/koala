@@ -12,6 +12,10 @@ const button1 = document.querySelector('.b1');
 
 button1.addEventListener('click', () => {
     console.log('PRESS ME CLICKED');
+    // button1.style.background = 'green';
+    // button1.style.padding = '100px';
+    // button1.style.border = '13px dotted black';
+    // button1.style.borderColor = 'pink';
 });
 
 button1.addEventListener('mouseenter', () => {
@@ -25,5 +29,10 @@ button1.addEventListener('mouseleave', () => {
 const button2 = document.querySelector('.b2');
 
 button2.addEventListener('click', () => {
-    document.querySelector('body').style.background = '#ff0000';
+    const b = document.querySelector('body');
+    if (b.style.background == 'red') {
+        b.style.background = 'white';
+    } else {
+        b.style.background = 'red';
+    }
 });
