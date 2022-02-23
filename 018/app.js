@@ -90,3 +90,9 @@ document.querySelector('.red-square').addEventListener('click', e => {
     // defaulto stabdymas
     e.preventDefault();
 })
+
+document.querySelectorAll('li').forEach(li => {
+    li.addEventListener('click', () => {
+        li.style.color = 'pink';
+    })
+})
