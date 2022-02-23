@@ -16,3 +16,8 @@
     background-color: aquamarine;
     cursor: pointer;
 }
+
+a {
+    color: brown;
+    font-size: 50px;
+}

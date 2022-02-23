@@ -70,3 +70,9 @@ child.addEventListener('click', (e) => {
 document.querySelector('body').addEventListener('click', () => {
     console.log('Body CLICK');
 });
+
+
+document.querySelector('a').addEventListener('click', e => {
+    e.preventDefault();
+    e.target.style.color = "green";
+})
