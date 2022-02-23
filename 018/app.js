@@ -9,6 +9,7 @@ const button1 = document.querySelector('.b1');
 
 
 
+
 button1.addEventListener('click', () => {
     console.log('PRESS ME CLICKED');
 });
@@ -19,4 +20,10 @@ button1.addEventListener('mouseenter', () => {
 
 button1.addEventListener('mouseleave', () => {
     console.log('MOUSE GONE');
+});
+
+const button2 = document.querySelector('.b2');
+
+button2.addEventListener('click', () => {
+    document.querySelector('body').style.background = '#ff0000';
 });
