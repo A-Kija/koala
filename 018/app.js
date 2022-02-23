@@ -118,9 +118,18 @@ const clowns = [];
 // });
 
 
+// document.querySelectorAll('li').forEach((li, i) => {
+//     li.addEventListener('click', e => {
+//         clowns.push([li.innerText, i]);
+//         console.log(clowns);
+//         e.stopPropagation();
+//     })
+// });
+
+
 document.querySelectorAll('li').forEach((li, i) => {
     li.addEventListener('click', e => {
-        clowns.push([li.innerText, i]);
+        clowns.push({ name: li.innerText, row: i });
         console.log(clowns);
         e.stopPropagation();
     })
