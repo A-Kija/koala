@@ -36,3 +36,13 @@ button2.addEventListener('click', () => {
         b.style.background = 'red';
     }
 });
+
+
+
+
+document.querySelector('.b3').addEventListener('click', () => {
+
+    let r = rand(5, 55);
+    document.querySelector('h1').innerText = r;
+
+});
