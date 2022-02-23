@@ -108,10 +108,19 @@ document.querySelector('.red-square').addEventListener('click', e => {
 
 const clowns = [];
 
-document.querySelectorAll('li').forEach(li => {
+// document.querySelectorAll('li').forEach((li, i) => {
+//     li.addEventListener('click', e => {
+//         e.target.style.color = 'pink';
+//         clowns.push(i);
+//         console.log(clowns);
+//         e.stopPropagation();
+//     })
+// });
+
+
+document.querySelectorAll('li').forEach((li, i) => {
     li.addEventListener('click', e => {
-        e.target.style.color = 'pink';
-        clowns.push(li.innerText);
+        clowns.push([li.innerText, i]);
         console.log(clowns);
         e.stopPropagation();
     })
