@@ -42,7 +42,31 @@ button2.addEventListener('click', () => {
 
 document.querySelector('.b3').addEventListener('click', () => {
 
-    let r = rand(5, 55);
-    document.querySelector('h1').innerText = r;
+    const r = rand(5, 55);
+    const h1 = document.querySelector('h1');
+    h1.innerText = r;
 
+});
+
+const parent = document.querySelector('.parent');
+const child = document.querySelector('.child');
+
+
+parent.addEventListener('click', () => {
+    // e.stopPropagation();
+    console.log('Parent CLICK');
+});
+
+child.addEventListener('click', (e) => {
+    e.stopPropagation();
+    console.log(e.target);
+
+    e.target.style.background = 'blue';
+
+    console.log('Child CLICK');
+});
+
+
+document.querySelector('body').addEventListener('click', () => {
+    console.log('Body CLICK');
 });
