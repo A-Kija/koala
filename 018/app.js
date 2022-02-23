@@ -76,3 +76,17 @@ document.querySelector('a').addEventListener('click', e => {
     e.preventDefault();
     e.target.style.color = "green";
 })
+
+
+document.querySelector('.red-square').addEventListener('click', e => {
+    // target duoda elementą
+    console.log(e.target);
+    console.log(document.querySelector('.red-square'));
+
+    // burbuliavimo stabdymas
+    e.stopPropagation();
+
+
+    // defaulto stabdymas
+    e.preventDefault();
+})
