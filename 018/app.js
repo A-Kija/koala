@@ -91,8 +91,28 @@ document.querySelector('.red-square').addEventListener('click', e => {
     e.preventDefault();
 })
 
+// document.querySelectorAll('li').forEach(li => {
+//     li.addEventListener('click', () => {
+//         li.style.color = 'pink';
+//     })
+// });
+
+// document.querySelectorAll('li').forEach(li => {
+//     li.addEventListener('click', e => {
+//         e.target.style.color = 'pink';
+//         console.log(e.target.innerText);
+//         e.stopPropagation();
+//     })
+// })
+
+
+const clowns = [];
+
 document.querySelectorAll('li').forEach(li => {
-    li.addEventListener('click', () => {
-        li.style.color = 'pink';
+    li.addEventListener('click', e => {
+        e.target.style.color = 'pink';
+        clowns.push(li.innerText);
+        console.log(clowns);
+        e.stopPropagation();
     })
-})
+});
