@@ -77,19 +77,9 @@ const cars = [
 
 
 const catsDiv = document.querySelector('.cats');
-
-
-
 cats.forEach(cat => {
-    // 1. sukuriam elementą
     const p = document.createElement('div');
-
-    // 2. sukuriam tekstą
     const text = document.createTextNode(cat);
-
-    // 3. teksto dėjimas į elementą
     p.appendChild(text);
-
-    // 4. patalpinam elemetntą į matomą dokumento dalį
     catsDiv.appendChild(p);
 });
