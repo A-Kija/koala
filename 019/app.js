@@ -39,3 +39,23 @@ button.addEventListener('click', () => {
     // 4. patalpinam elemetntą į matomą dokumento dalį
     section.appendChild(p);
 });
+
+
+
+const div = document.querySelector('.hello');
+const inp = document.querySelector('input');
+let i = 0;
+
+inp.addEventListener('click', () => {
+    // 1. sukuriam elementą
+    const p = document.createElement('span');
+
+    // 2. sukuriam tekstą
+    const text = document.createTextNode(' hello ' + ++i);
+
+    // 3. teksto dėjimas į elementą
+    p.appendChild(text);
+
+    // 4. patalpinam elemetntą į matomą dokumento dalį
+    div.appendChild(p);
+});
