@@ -59,3 +59,37 @@ inp.addEventListener('click', () => {
     // 4. patalpinam elemetntą į matomą dokumento dalį
     div.appendChild(p);
 });
+
+const cats = ['Murka', 'Rainius', 'Meilutė', 'Bosas', 'Dičkis'];
+
+const cars = [
+    { maker: 'Volvo', color: 'blue' },
+    { maker: 'MB', color: 'yellow' },
+    { maker: 'Opel', color: 'pink' },
+    { maker: 'Volvo', color: 'orange' },
+    { maker: 'Audi', color: 'blue' },
+    { maker: 'Ferrari', color: 'red' },
+    { maker: 'MB', color: 'gray' },
+    { maker: 'Scania', color: 'yellow' },
+    { maker: 'Kamaz', color: 'orange' },
+    { maker: 'Saab', color: 'brown' }
+];
+
+
+const catsDiv = document.querySelector('.cats');
+
+
+
+cats.forEach(cat => {
+    // 1. sukuriam elementą
+    const p = document.createElement('div');
+
+    // 2. sukuriam tekstą
+    const text = document.createTextNode(cat);
+
+    // 3. teksto dėjimas į elementą
+    p.appendChild(text);
+
+    // 4. patalpinam elemetntą į matomą dokumento dalį
+    catsDiv.appendChild(p);
+});
