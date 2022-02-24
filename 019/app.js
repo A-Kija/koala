@@ -76,10 +76,47 @@ const cars = [
 ];
 
 
+const cars2 = [
+    ['Volvo', 'blue', 55],
+    ['MB', 'yellow', 0],
+    ['Opel', 'pink', 11],
+    ['Volvo', 'orange', 78],
+    ['Audi', 'blue', 0],
+    ['Ferrari', 'red', 99],
+    ['MB', 'gray', 20],
+    ['Scania', 'yellow', 78],
+    ['Kamaz', 'orange', 98],
+    ['Saab', 'brown', 0]
+];
+
+
 const catsDiv = document.querySelector('.cats');
 cats.forEach(cat => {
     const p = document.createElement('div');
     const text = document.createTextNode(cat);
     p.appendChild(text);
     catsDiv.appendChild(p);
+});
+
+
+
+// const carsDiv = document.querySelector('.cars');
+// cars.forEach(car => {
+//     const p = document.createElement('div');
+//     p.style.color = car.color;
+//     const text = document.createTextNode(car.maker);
+//     p.appendChild(text);
+//     carsDiv.appendChild(p);
+// });
+
+
+const carsDiv = document.querySelector('.cars');
+cars2.forEach(car => {
+    if (car[2] != 0) {
+        const p = document.createElement('div');
+        p.style.color = car[1];
+        const text = document.createTextNode(car[0]);
+        p.appendChild(text);
+        carsDiv.appendChild(p);
+    }
 });
