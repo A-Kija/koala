@@ -1,3 +1,9 @@
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 const i1 = document.querySelector('.i1');
 const b1 = document.querySelector('.b1');
 
@@ -88,4 +94,18 @@ b7.addEventListener('click', () => {
     });
     a7.push(_3);
     console.log(a7);
+});
+
+const arr3 = [];
+
+for (let i = 0; i < 3; i++) {
+    arr3.push(rand(10, 20));
+}
+
+const field = document.querySelector('#circles');
+arr3.forEach(circle => {
+    const p = document.createElement('div');
+    const text = document.createTextNode(circle);
+    p.appendChild(text);
+    field.appendChild(p);
 });

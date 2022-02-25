@@ -1,0 +1,18 @@
+div {
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: cornflowerblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    border-radius: 50%;
+}
+
+#circles {
+    display: flex;
+}
