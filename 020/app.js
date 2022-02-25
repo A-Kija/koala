@@ -73,3 +73,19 @@ b6.addEventListener('click', () => {
     a6.push(_3);
     console.log(a6);
 });
+
+
+const i7 = document.querySelectorAll('.i7');
+const b7 = document.querySelector('.b7');
+const a7 = [];
+
+b7.addEventListener('click', () => {
+    const _3 = [];
+    i7.forEach(check => {
+        if (check.checked) {
+            _3.push(check.value);
+        }
+    });
+    a7.push(_3);
+    console.log(a7);
+});
