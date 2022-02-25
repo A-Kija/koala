@@ -31,3 +31,20 @@ b3.addEventListener('click', () => {
     a3.push([i31.value, i32.value]);
     console.log(a3);
 });
+
+
+const i4 = document.querySelector('.i4');
+const b4 = document.querySelector('.b4');
+const a4 = [];
+
+b4.addEventListener('click', () => {
+    a4.push(i4.value);
+    console.log(a4);
+});
+
+
+const i5 = document.querySelectorAll('[name=n5]');
+
+console.log(i5);
+
+i5.forEach(radio => console.log(radio.value));
