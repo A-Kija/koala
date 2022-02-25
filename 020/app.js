@@ -105,7 +105,15 @@ for (let i = 0; i < 3; i++) {
 const field = document.querySelector('#circles');
 arr3.forEach(circle => {
     const p = document.createElement('div');
-    const text = document.createTextNode(circle);
+    const text = document.createTextNode('| ' + circle + ' |');
     p.appendChild(text);
+    p.dataset.ballCount = circle;
+    p.dataset.blaBlaBla = 'Bla Bla Bla';
     field.appendChild(p);
+    p.addEventListener('click', () => {
+        let count = p.dataset.ballCount;
+        count--;
+        p.dataset.ballCount = count;
+        p.innerText = '| ' + count + ' |';
+    })
 });
