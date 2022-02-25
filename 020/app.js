@@ -55,3 +55,21 @@ b5.addEventListener('click', () => {
         }
     });
 });
+
+
+const i6 = document.querySelectorAll('[name=n6]');
+const b6 = document.querySelector('.b6');
+const a6 = [];
+
+b6.addEventListener('click', () => {
+    const _3 = [];
+    i6.forEach(radio => {
+        if (radio.checked) {
+            _3.push(radio.value);
+        } else {
+            _3.push('X');
+        }
+    });
+    a6.push(_3);
+    console.log(a6);
+});
