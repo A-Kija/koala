@@ -44,7 +44,14 @@ b4.addEventListener('click', () => {
 
 
 const i5 = document.querySelectorAll('[name=n5]');
+const b5 = document.querySelector('.b5');
+const a5 = [];
 
-console.log(i5);
-
-i5.forEach(radio => console.log(radio.value));
+b5.addEventListener('click', () => {
+    i5.forEach(radio => {
+        if (radio.checked) {
+            a5.push(radio.value);
+            console.log(a5);
+        }
+    });
+});
