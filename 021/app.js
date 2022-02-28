@@ -123,10 +123,12 @@ h6Button.addEventListener('click', () => {
     localStorage.setItem('australiaAnimal', australiaRand);
 });
 
-console.log(australia);
+const australia2 = { la: 'lala', bla: { ku: 'kuku', bu: 87 } };
 
-localStorage.setItem('try', australia);
-localStorage.setItem('try2', JSON.stringify(australia));
+console.log(australia2);
+
+localStorage.setItem('try', australia2);
+localStorage.setItem('try2', JSON.stringify(australia2));
 
 console.log(localStorage.getItem('try'));
 console.log(JSON.parse(localStorage.getItem('try2')));
