@@ -122,3 +122,11 @@ h6Button.addEventListener('click', () => {
     h6.innerText = australiaRand;
     localStorage.setItem('australiaAnimal', australiaRand);
 });
+
+console.log(australia);
+
+localStorage.setItem('try', australia);
+localStorage.setItem('try2', JSON.stringify(australia));
+
+console.log(localStorage.getItem('try'));
+console.log(JSON.parse(localStorage.getItem('try2')));
