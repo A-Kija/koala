@@ -117,3 +117,7 @@ arr3.forEach(circle => {
         p.innerText = '| ' + count + ' |';
     })
 });
+
+
+// const africa = ['Zebras', 'Liūtas', '', 'Raganosis', '', 'Raganosis', 'Begemotas'];
+// const australia = ['Kengūra', 'Ančiasnapis', 'Digo', 'Atsirado', 'Strutis'];
