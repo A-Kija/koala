@@ -76,7 +76,7 @@ minus.addEventListener('click', () => {
 
 console.log('----------------- 5 ----------------');
 
-const australia = ['Kengūra', 'Ančiasnapis', 'Digo', 'Atsirado', 'Strutis'];
+const australia = ['Kengūra', 'Ančiasnapis', 'Dingo', 'Atsirado', 'Strutis'];
 const ul5 = document.querySelector('#australia');
 let html = '';
 australia.forEach(animal => {
@@ -88,3 +88,25 @@ australia.forEach(animal => {
 });
 
 ul5.innerHTML = html;
+
+
+// const animal = 'Bebras';
+
+// localStorage.setItem('forestAnimal', animal); // idedame i saugykla
+
+localStorage.removeItem('forestAnimal');
+
+if (localStorage.getItem('forestAnimal') === null) {
+    console.log('Nieko nėra');
+} else {
+    console.log(localStorage.getItem('forestAnimal'));
+
+}
+
+const h6 = document.querySelector('h6');
+const h6Button = document.querySelector('.h6');
+
+h6Button.addEventListener('click', () => {
+    const australiaRand = australia[rand(0, australia.length - 1)];
+    h6.innerText = australiaRand;
+})
