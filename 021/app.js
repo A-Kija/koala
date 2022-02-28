@@ -100,13 +100,25 @@ if (localStorage.getItem('forestAnimal') === null) {
     console.log('Nieko nėra');
 } else {
     console.log(localStorage.getItem('forestAnimal'));
-
 }
+
+
+
+
+
 
 const h6 = document.querySelector('h6');
 const h6Button = document.querySelector('.h6');
 
+if (localStorage.getItem('australiaAnimal') !== null) {
+    h6.innerText = localStorage.getItem('australiaAnimal');
+} else {
+    h6.innerText = 'Nop nop nop';
+}
+
+
 h6Button.addEventListener('click', () => {
     const australiaRand = australia[rand(0, australia.length - 1)];
     h6.innerText = australiaRand;
-})
+    localStorage.setItem('australiaAnimal', australiaRand);
+});
