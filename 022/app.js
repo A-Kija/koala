@@ -73,3 +73,33 @@ kibir2.prideti1Akmeni();
 
 kibir1.kiekPririnktaAkmenu();
 kibir2.kiekPririnktaAkmenu();
+
+
+class Pinigine {
+
+    constructor() {
+        this.popieriniaiPinigai = 0;
+        this.metaliniaiPinigai = 0;
+    }
+
+    ideti(kiekis) {
+        if (kiekis > 2) {
+            this.popieriniaiPinigai += kiekis;
+        } else {
+            this.metaliniaiPinigai += kiekis;
+        }
+    }
+
+    skaiciuoti() {
+        console.log('Me turim: ' + (this.popieriniaiPinigai + this.metaliniaiPinigai) + ' pinigų');
+    }
+
+}
+
+const pin = new Pinigine();
+
+pin.ideti(3);
+pin.ideti(3);
+pin.ideti(0.4);
+pin.skaiciuoti();
+console.log(pin);
