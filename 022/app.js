@@ -83,6 +83,9 @@ class Pinigine {
     }
 
     ideti(kiekis) {
+        if (kiekis < 0) {
+            return;
+        }
         if (kiekis > 2) {
             this.popieriniaiPinigai += kiekis;
         } else {
@@ -100,6 +103,27 @@ const pin = new Pinigine();
 
 pin.ideti(3);
 pin.ideti(3);
-pin.ideti(0.4);
+pin.ideti(-100);
 pin.skaiciuoti();
 console.log(pin);
+
+class h2 {
+    constructor(t) {
+        this.h2 = document.createElement('h2');
+        const text = document.createTextNode(t);
+        this.h2.appendChild(text);
+        document.querySelector('body').appendChild(this.h2);
+    }
+
+    color(c) {
+        this.h2.style.color = c;
+    }
+}
+
+
+const h2A = new h2('Slava');
+const h2B = new h2('Ukraine');
+
+
+h2A.color('blue');
+h2B.color('yellow');
