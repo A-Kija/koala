@@ -11,14 +11,11 @@
 //     console.log(this.count * 10);
 // }
 
-
-
-
 class myFlat {
 
     // savybės
-    constructor() {
-        this.color = 'pink';
+    constructor(c) {
+        this.color = c;
         this.count = 45;
     }
 
@@ -33,15 +30,10 @@ class myFlat {
 
 }
 
-const flat = new myFlat(); // objekto kūrimas
-
-
+const flat = new myFlat('pink'); // objekto kūrimas
 flat.whatColor(); // metodo naudojimas
 flat.count10();
 
-
-const flat23 = new myFlat(); // objekto kūrimas
-
-
+const flat23 = new myFlat('green'); // objekto kūrimas
 flat23.whatColor(); // metodo naudojimas
 flat23.count10();
