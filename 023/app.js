@@ -60,9 +60,9 @@ const elements = {
 
 elements.newAnimal.addEventListener('click', () => {
     const animal = new Animal(
-        newAnimalName.value,
-        newAnimalType.value,
-        newAnimalWeight.value,
+        elements.newAnimalName.value,
+        elements.newAnimalType.value,
+        elements.newAnimalWeight.value,
     );
     storage.create(animal);
 })
