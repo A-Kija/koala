@@ -18,10 +18,51 @@ class Animal {
         localStorage.setItem('vetId', id);
         return id;
     }
+}
 
+
+class Storage {
+
+    constructor(k) {
+        this.key = k;
+        this.data = this.read();
+    }
+
+    read() {
+        let data = localStorage.getItem(this.key);
+        if (data === null) {
+            localStorage.setItem(this.key, JSON.stringify([]));
+            return [];
+        }
+        return JSON.parse(data);
+    }
+
+    write() {
+        localStorage.setItem(this.key, JSON.stringify(this.data));
+    }
+
+    create(obj) {
+        this.data.push(obj);
+        this.write();
+    }
 
 }
 
 
-console.log(new Animal('MurN', 'c', 5));
-console.log(new Animal('MurS', 'c', 5, 78));
+const storage = new Storage('vetData');
+
+const elements = {
+    newAnimalName: document.querySelector('#new-animal-name'),
+    newAnimalType: document.querySelector('#new-animal-type'),
+    newAnimalWeight: document.querySelector('#new-animal-weight'),
+    newAnimal: document.querySelector('#new-animal')
+};
+
+elements.newAnimal.addEventListener('click', () => {
+    const animal = new Animal(
+        newAnimalName.value,
+        newAnimalType.value,
+        newAnimalWeight.value,
+    );
+    storage.create(animal);
+})
