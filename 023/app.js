@@ -55,7 +55,8 @@ const elements = {
     newAnimalName: document.querySelector('#new-animal-name'),
     newAnimalType: document.querySelector('#new-animal-type'),
     newAnimalWeight: document.querySelector('#new-animal-weight'),
-    newAnimal: document.querySelector('#new-animal')
+    newAnimal: document.querySelector('#new-animal'),
+    animalsList: document.querySelector('#animals-list')
 };
 
 elements.newAnimal.addEventListener('click', () => {
@@ -65,4 +66,22 @@ elements.newAnimal.addEventListener('click', () => {
         elements.newAnimalWeight.value,
     );
     storage.create(animal);
-})
+    renderList();
+});
+
+
+const renderList = () => {
+    let html = '';
+    storage.data.forEach(animal => {
+        html += `
+            <li>${animal.name}</li>
+        `;
+
+    });
+    const ul = document.createElement('ul');
+    ul.innerHTML = html;
+    elements.animalsList.innerHTML = '';
+    elements.animalsList.appendChild(ul);
+}
+
+renderList();
