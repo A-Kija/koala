@@ -46,6 +46,15 @@ class Storage {
         this.write();
     }
 
+    delete(id) {
+        this.data.forEach((animal, i) => {
+            if (animal.id == id) {
+                this.data.splice(i, 1);
+            }
+        });
+        this.write();
+    }
+
 }
 
 
@@ -103,7 +112,10 @@ const renderList = () => {
         buttonDel.classList.add('btn', 'btn-outline-danger', 'my-2', 'my-sm-0');
         buttonDel.appendChild(document.createTextNode('Trinti'));
         div2.appendChild(buttonDel);
-
+        buttonDel.addEventListener('click', () => {
+            storage.delete(animal.id);
+            renderList();
+        })
 
 
 
