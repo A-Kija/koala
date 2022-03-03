@@ -80,6 +80,8 @@ const elements = {
     editAnimalName: document.querySelector('#edit-animal-name'),
     editAnimalType: document.querySelector('#edit-animal-type'),
     editAnimalWeight: document.querySelector('#edit-animal-weight'),
+    search: document.querySelector('[type=search]'),
+    searchButton: document.querySelector('#search'),
 };
 
 // Pridedant gyvuna
@@ -93,12 +95,14 @@ elements.newAnimal.addEventListener('click', () => {
     renderList();
 });
 
-const renderList = () => {
+const renderList = (d) => {
 
     const ul = document.createElement('ul');
     ul.classList.add('list-group'); // prideda klase
 
-    storage.data.forEach(animal => {
+    const data = typeof d == 'undefined' ? storage.data : d;
+
+    data.forEach(animal => {
         const li = document.createElement('li');
         li.classList.add('list-group-item');
 
@@ -185,6 +189,22 @@ elements.editAnimal.addEventListener('click', () => {
     storage.edit(animal);
     hideModal();
     renderList();
-})
+});
+
+
+elements.searchButton.addEventListener('click', e => {
+    e.preventDefault();
+    const s = elements.search.value;
+    const animals = storage.data.filter(animal => animal.name == s);
+    renderList(animals);
+});
+
+elements.search.addEventListener('input', () => {
+    if (elements.search.value == '') {
+        renderList();
+    }
+});
+
+
 
 renderList(); // pasileidzia uzsikrovus puslapiui
