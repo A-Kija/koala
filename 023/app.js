@@ -55,6 +55,17 @@ class Storage {
         this.write();
     }
 
+    edit(obj) {
+        this.data.forEach(animal => {
+            if (animal.id == obj.id) {
+                animal.name = obj.name;
+                animal.type = obj.type;
+                animal.weight = obj.weight;
+            }
+        });
+        this.write();
+    }
+
 }
 
 
@@ -65,7 +76,11 @@ const elements = {
     newAnimalType: document.querySelector('#new-animal-type'),
     newAnimalWeight: document.querySelector('#new-animal-weight'),
     newAnimal: document.querySelector('#new-animal'),
-    animalsList: document.querySelector('#animals-list')
+    editAnimal: document.querySelector('#edit-animal'),
+    animalsList: document.querySelector('#animals-list'),
+    editAnimalName: document.querySelector('#edit-animal-name'),
+    editAnimalType: document.querySelector('#edit-animal-type'),
+    editAnimalWeight: document.querySelector('#edit-animal-weight'),
 };
 
 elements.newAnimal.addEventListener('click', () => {
@@ -114,7 +129,7 @@ const renderList = () => {
         buttonEdit.appendChild(document.createTextNode('Redaguoti'));
         div2.appendChild(buttonEdit);
         buttonEdit.addEventListener('click', () => {
-            showModal();
+            showModal(animal);
         });
 
 
@@ -136,23 +151,44 @@ const renderList = () => {
     elements.animalsList.appendChild(ul);
 }
 
+let modalId = 0;
 
-const showModal = () => {
+const showModal = (animal) => {
     const modal = document.querySelector('.modal');
     modal.classList.add('show');
     modal.style.display = 'block';
+    elements.editAnimalName.value = animal.name;
+    elements.editAnimalType.value = animal.type;
+    elements.editAnimalWeight.value = animal.weight;
+    modalId = animal.id;
 }
 
 const hideModal = () => {
     const modal = document.querySelector('.modal');
     modal.classList.remove('show');
     modal.style.display = 'none';
+    elements.editAnimalName.value = '';
+    elements.editAnimalType.value = '';
+    elements.editAnimalWeight.value = '';
+    modalId = 0;
 }
 
 document.querySelectorAll('[data-dismiss=modal]').forEach(b => {
     b.addEventListener('click', () => {
         hideModal();
     });
+});
+
+elements.editAnimal.addEventListener('click', () => {
+    const animal = new Animal(
+        elements.editAnimalName.value,
+        elements.editAnimalType.value,
+        elements.editAnimalWeight.value,
+        modalId
+    );
+    storage.edit(animal);
+    hideModal();
+    renderList();
 })
 
 renderList();
