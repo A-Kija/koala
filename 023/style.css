@@ -1,0 +1,41 @@
+.dog {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: blue;
+    margin: 10px 15px;
+    display: inline-block;
+}
+
+.cat {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: brown;
+    margin: 10px 15px;
+    display: inline-block;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-group-item .content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.list-group-item .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.list-group-item h6 {
+    display: inline-block;
+    margin: 5px 0;
+    width: 140px;
+}

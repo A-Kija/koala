@@ -42,7 +42,7 @@ class Storage {
     }
 
     create(obj) {
-        this.data.push(obj);
+        this.data.unshift(obj);
         this.write();
     }
 
@@ -71,15 +71,46 @@ elements.newAnimal.addEventListener('click', () => {
 
 
 const renderList = () => {
-    let html = '';
-    storage.data.forEach(animal => {
-        html += `
-            <li>${animal.name}</li>
-        `;
 
-    });
     const ul = document.createElement('ul');
-    ul.innerHTML = html;
+    ul.classList.add('list-group'); // prideda klase
+
+    storage.data.forEach(animal => {
+        const li = document.createElement('li');
+        li.classList.add('list-group-item');
+
+        const div1 = document.createElement('div');
+        div1.classList.add('content');
+
+        const h6 = document.createElement('h6');
+        h6.appendChild(document.createTextNode(animal.name || 'no name'));
+        div1.appendChild(h6);
+        const span = document.createElement('span');
+        if (animal.type == 'c') {
+            span.classList.add('cat');
+        } else {
+            span.classList.add('dog');
+        }
+        div1.appendChild(span);
+        const i = document.createElement('i');
+        i.appendChild(document.createTextNode((animal.weight || 0) + ' kg'));
+        div1.appendChild(i);
+        li.appendChild(div1);
+
+        const div2 = document.createElement('div');
+        div2.classList.add('buttons');
+        const buttonDel = document.createElement('button');
+        buttonDel.classList.add('btn', 'btn-outline-danger', 'my-2', 'my-sm-0');
+        buttonDel.appendChild(document.createTextNode('Trinti'));
+        div2.appendChild(buttonDel);
+
+
+
+
+        li.appendChild(div2);
+
+        ul.appendChild(li);
+    });
     elements.animalsList.innerHTML = '';
     elements.animalsList.appendChild(ul);
 }
