@@ -120,11 +120,23 @@ const renderList = () => {
 
 
         li.appendChild(div2);
-
         ul.appendChild(li);
     });
     elements.animalsList.innerHTML = '';
     elements.animalsList.appendChild(ul);
+}
+
+
+const showModal = () => {
+    const modal = document.querySelector('.modal');
+    modal.classList.add('show');
+    modal.style.display = 'block';
+}
+
+const hideModal = () => {
+    const modal = document.querySelector('.modal');
+    modal.classList.remove('show');
+    modal.style.display = 'none';
 }
 
 renderList();

@@ -88,6 +88,57 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Redaguoti</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label>Vardas</label>
+                                    <input id="new-animal-name" type="text" class="form-control">
+                                    <small class="form-text text-muted">Katiniuko arba šuniuko vardas</small>
+                                </div>
+                            </div>
+
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <label>Gyvuniuko tipas</label>
+                                    <select id="new-animal-type" class="form-control">
+                                    <option value="c">Katiniukas</option>
+                                    <option value="d">Šuniukas</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label>Svoris</label>
+                                    <input id="new-animal-weight" type="text" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Uždaryti</button>
+                    <button type="button" class="btn btn-primary">Išsaugoti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
