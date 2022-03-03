@@ -20,7 +20,6 @@ class Animal {
     }
 }
 
-
 class Storage {
 
     constructor(k) {
@@ -47,11 +46,13 @@ class Storage {
     }
 
     delete(id) {
-        this.data.forEach((animal, i) => {
-            if (animal.id == id) {
-                this.data.splice(i, 1);
-            }
-        });
+        // this.data.forEach((animal, i) => {
+        //     if (animal.id == id) {
+        //         this.data.splice(i, 1);
+        //     }
+        // });
+        const index = this.data.findIndex(animal => animal.id == id);
+        this.data.splice(index, 1);
         this.write();
     }
 
@@ -65,9 +66,7 @@ class Storage {
         });
         this.write();
     }
-
 }
-
 
 const storage = new Storage('vetData');
 
@@ -92,7 +91,6 @@ elements.newAnimal.addEventListener('click', () => {
     storage.create(animal);
     renderList();
 });
-
 
 const renderList = () => {
 
@@ -132,7 +130,6 @@ const renderList = () => {
             showModal(animal);
         });
 
-
         const buttonDel = document.createElement('button');
         buttonDel.classList.add('btn', 'btn-outline-danger', 'my-2', 'my-sm-0', 'm-1');
         buttonDel.appendChild(document.createTextNode('Trinti'));
@@ -141,8 +138,6 @@ const renderList = () => {
             storage.delete(animal.id);
             renderList();
         });
-
-
 
         li.appendChild(div2);
         ul.appendChild(li);
