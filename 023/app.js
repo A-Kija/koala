@@ -108,14 +108,24 @@ const renderList = () => {
 
         const div2 = document.createElement('div');
         div2.classList.add('buttons');
+
+        const buttonEdit = document.createElement('button');
+        buttonEdit.classList.add('btn', 'btn-outline-success', 'my-2', 'my-sm-0', 'm-1');
+        buttonEdit.appendChild(document.createTextNode('Redaguoti'));
+        div2.appendChild(buttonEdit);
+        buttonEdit.addEventListener('click', () => {
+            showModal();
+        });
+
+
         const buttonDel = document.createElement('button');
-        buttonDel.classList.add('btn', 'btn-outline-danger', 'my-2', 'my-sm-0');
+        buttonDel.classList.add('btn', 'btn-outline-danger', 'my-2', 'my-sm-0', 'm-1');
         buttonDel.appendChild(document.createTextNode('Trinti'));
         div2.appendChild(buttonDel);
         buttonDel.addEventListener('click', () => {
             storage.delete(animal.id);
             renderList();
-        })
+        });
 
 
 
@@ -138,5 +148,11 @@ const hideModal = () => {
     modal.classList.remove('show');
     modal.style.display = 'none';
 }
+
+document.querySelectorAll('[data-dismiss=modal]').forEach(b => {
+    b.addEventListener('click', () => {
+        hideModal();
+    });
+})
 
 renderList();
