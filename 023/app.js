@@ -68,7 +68,7 @@ class Storage {
     }
 }
 
-const storage = new Storage('vetData');
+const storage = new Storage('vetData'); // pasileidzia uzsikrovus puslapiui
 
 const elements = {
     newAnimalName: document.querySelector('#new-animal-name'),
@@ -82,6 +82,7 @@ const elements = {
     editAnimalWeight: document.querySelector('#edit-animal-weight'),
 };
 
+// Pridedant gyvuna
 elements.newAnimal.addEventListener('click', () => {
     const animal = new Animal(
         elements.newAnimalName.value,
@@ -186,4 +187,4 @@ elements.editAnimal.addEventListener('click', () => {
     renderList();
 })
 
-renderList();
+renderList(); // pasileidzia uzsikrovus puslapiui
