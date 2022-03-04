@@ -29,7 +29,10 @@ class Troleibusas {
             this.keleiviuSkaicius = 0;
         } else {
             this.keleiviuSkaicius -= keleiviuSkaicius;
-            Troleibusas.bendrasKeleiviuSkaicius(-keleiviuSkaicius);
+            // Troleibusas.bendrasKeleiviuSkaicius(-keleiviuSkaicius);
+
+            this.constructor.bendrasKeleiviuSkaicius(-keleiviuSkaicius);
+            // this.constructor nestatiniam metode yra klases atitikmuo
         }
 
         // this.keleiviuSkaicius = Math.max(0, this.keleiviuSkaicius - keleiviuSkaicius);
