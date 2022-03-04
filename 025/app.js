@@ -163,10 +163,13 @@ s100.stiklinejeYra();
 
 class Grybas {
 
+    static visiGrybai = [];
+
     constructor() {
         this.valgomas = !this.rand(0, 1);
         this.sukirmijes = !this.rand(0, 1);
         this.svoris = this.rand(5, 45);
+        this.constructor.visiGrybai.push(this); // this.constructor === Grybas
     }
 
     rand(min, max) {
@@ -180,4 +183,6 @@ class Grybas {
 const g1 = new Grybas();
 const g2 = new Grybas();
 
-console.log(g1, g2);
+// console.log(g1, g2);
+
+console.log(Grybas.visiGrybai);
