@@ -120,6 +120,7 @@ class Stikline {
 
     ipilti(kiekis) {
         this.kiekis = Math.min(this.turis, this.kiekis + kiekis);
+        return this;
     }
 
     ispilti() {
@@ -139,11 +140,16 @@ const s200 = new Stikline(200);
 const s150 = new Stikline(150);
 const s100 = new Stikline(100);
 
+
+
 s200.ipilti(200);
 
 s150.ipilti(s200.ispilti());
 
 s100.ipilti(s150.ispilti());
+
+
+// s100.ipilti(s150.ipilti(s200.ipilti(200).ispilti()).ispilti());
 
 
 s200.stiklinejeYra();
