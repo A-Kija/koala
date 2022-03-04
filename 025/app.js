@@ -177,12 +177,32 @@ class Grybas {
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1) + min);
     }
+}
+
+
+class Krepsys {
+
+    constructor() {
+        this.dydis = 500;
+        this.prikrauta = 0;
+    }
+
+    deti(grybas) {
+        if (grybas.valgomas && !grybas.sukirmijes) {
+            this.prikrauta += grybas.svoris;
+        }
+        return this.dydis > this.prikrauta;
+    }
 
 }
 
-const g1 = new Grybas();
-const g2 = new Grybas();
+const krepsys = new Krepsys();
 
-// console.log(g1, g2);
+
+while (krepsys.deti(new Grybas())) {}
+
+
 
 console.log(Grybas.visiGrybai);
+
+console.log(krepsys.prikrauta);
