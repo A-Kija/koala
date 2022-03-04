@@ -108,3 +108,44 @@ z3.duotiMorku(10);
 
 
 console.log(Zuikis.visoMorku, Zuikis.visoKopustu);
+
+
+
+class Stikline {
+
+    constructor(t) {
+        this.turis = t;
+        this.kiekis = 0;
+    }
+
+    ipilti(kiekis) {
+        this.kiekis = Math.min(this.turis, this.kiekis + kiekis);
+    }
+
+    ispilti() {
+        let k = this.kiekis;
+        this.kiekis = 0;
+        return k;
+    }
+
+    stiklinejeYra() {
+        console.log(`Stiklinėje ${this.turis} ml talpos
+         dabar yra ${this.kiekis} ml`);
+    }
+
+}
+
+const s200 = new Stikline(200);
+const s150 = new Stikline(150);
+const s100 = new Stikline(100);
+
+s200.ipilti(200);
+
+s150.ipilti(s200.ispilti());
+
+s100.ipilti(s150.ispilti());
+
+
+s200.stiklinejeYra();
+s150.stiklinejeYra();
+s100.stiklinejeYra();
