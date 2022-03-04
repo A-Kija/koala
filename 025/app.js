@@ -24,8 +24,16 @@ class Troleibusas {
     }
 
     islipa(keleiviuSkaicius) {
-        this.keleiviuSkaicius = Math.max(0, this.keleiviuSkaicius - keleiviuSkaicius);
-        Troleibusas.bendrasKeleiviuSkaicius(-keleiviuSkaicius);
+        if (keleiviuSkaicius > this.keleiviuSkaicius) {
+            Troleibusas.bendrasKeleiviuSkaicius(-this.keleiviuSkaicius);
+            this.keleiviuSkaicius = 0;
+        } else {
+            this.keleiviuSkaicius -= keleiviuSkaicius;
+            Troleibusas.bendrasKeleiviuSkaicius(-keleiviuSkaicius);
+        }
+
+        // this.keleiviuSkaicius = Math.max(0, this.keleiviuSkaicius - keleiviuSkaicius);
+        // Troleibusas.bendrasKeleiviuSkaicius(-keleiviuSkaicius);
     }
 
     vaziuoja() {
@@ -45,7 +53,7 @@ const nr8 = new Troleibusas();
 nr6.ilipa(5);
 nr6.ilipa(5);
 nr8.ilipa(10);
-nr8.islipa(5);
+nr8.islipa(50);
 nr6.keleiviuSkaiciusVisuoseTroleibusuose();
 // nr6.islipa(10);
 // nr6.vaziuoja();
