@@ -148,10 +148,36 @@ s150.ipilti(s200.ispilti());
 
 s100.ipilti(s150.ispilti());
 
-
-// s100.ipilti(s150.ipilti(s200.ipilti(200).ispilti()).ispilti());
-
+/*
+s100.ipilti(
+    s150.ipilti(
+        s200.ipilti(200).ispilti()
+        ).ispilti()
+    );
+*/
 
 s200.stiklinejeYra();
 s150.stiklinejeYra();
 s100.stiklinejeYra();
+
+
+class Grybas {
+
+    constructor() {
+        this.valgomas = !this.rand(0, 1);
+        this.sukirmijes = !this.rand(0, 1);
+        this.svoris = this.rand(5, 45);
+    }
+
+    rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+}
+
+const g1 = new Grybas();
+const g2 = new Grybas();
+
+console.log(g1, g2);
