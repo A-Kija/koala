@@ -2,10 +2,10 @@ const tablo = [];
 
 
 for (let i = 0; i < 15; i++) {
-    tablo.push('-');
+    tablo.push(' ');
 }
 
-let text = '*Labas*';
+let text = 'KROKODILAS...';
 let letter = 0;
 const div = document.querySelector('div.tablo');
 
@@ -18,7 +18,7 @@ setInterval(() => {
         html += `<div class="letter">${element}</div>`;
     });
     div.innerHTML = html;
-}, 1000);
+}, 300);
 
 
 
