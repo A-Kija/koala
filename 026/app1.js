@@ -2,16 +2,16 @@ const balls = [];
 
 class ColorBall {
 
-    constructor(color, number) {
+    constructor(color, n) {
         this.color = color;
-        this.number = number;
-        balls.push(this);
+        this.number = n;
+        balls.push(this); // gaminamas masyvas dedant po vien1 elementa
     }
 }
 
 const number = document.querySelector('#number');
 const color = document.querySelector('[type=color]');
-const button = document.querySelectorAll('button');
+const button = document.querySelectorAll('button'); // nodeList
 const div = document.querySelector('div.balls');
 
 button.forEach(b => {
