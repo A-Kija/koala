@@ -17,7 +17,7 @@ const paint = () => {
     div.innerHTML = html;
 }
 
-const number = document.querySelector('[type=text]');
+const number = document.querySelector('#number');
 const color = document.querySelector('[type=color]');
 const add = document.querySelector('#add');
 const remove = document.querySelector('#remove');
@@ -27,7 +27,6 @@ add.addEventListener('click', () => {
     new ColorBall(color.value, number.value);
     paint();
 });
-
 
 remove.addEventListener('click', () => {
     balls.shift();
