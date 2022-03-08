@@ -33,3 +33,33 @@ sortButton.addEventListener('click', () => {
 
 
 ul.innerHTML = render(products);
+
+
+const map1 = new Map();
+
+map1.set('color3', 'yellow');
+map1.set('color1', 'blue');
+map1.set('color2', 'red');
+
+const arr1 = [...map1];
+
+arr1.sort();
+
+map1.clear();
+
+arr1.forEach(e => map1.set(e[0], e[1]));
+
+console.log(arr1);
+
+// map1.delete('animal');
+
+// console.log(map1.has('animal'));
+// console.log(map1.has('car'));
+
+// console.log(map1.get('animal'));
+
+console.log(map1);
+
+console.log('----------');
+
+map1.forEach(a => console.log(a));
