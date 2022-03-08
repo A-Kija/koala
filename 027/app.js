@@ -83,7 +83,7 @@ class PirkiniuKrepselis {
 
     ideti(key, kiekis) {
         if (this.turinys.has(key)) {
-            kiekis = kiekis + this.turinys.get(key);
+            kiekis += this.turinys.get(key);
         }
         this.turinys.set(key, kiekis);
     }
