@@ -25,7 +25,6 @@ const sortButton = document.querySelector('#sort');
 
 sortButton.addEventListener('click', () => {
     let direction = parseInt(sortButton.dataset.sortAs);
-    console.log(direction);
     sortArray(products, direction);
     direction = direction * -1;
     sortButton.dataset.sortAs = direction;
