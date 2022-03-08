@@ -15,20 +15,37 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         
         .letter {
             font-family: 'Major Mono Display', monospace;
             font-size: 60px;
+            color: crimson;
+            min-width: 60px;
         }
         
         .tablo {
             display: flex;
         }
+        
+        .enter {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            padding: 40px;
+            border: 2px solid plum;
+        }
     </style>
 </head>
 
 <body>
+    <div class="enter">
+        <input type="text" id="text">
+        <button id="enter-text">Enter Text</button>
+        <input type="color" id="color">
+        <input type="range" id="size" min="30" max="90">
+    </div>
     <div class="tablo"></div>
 </body>
 
