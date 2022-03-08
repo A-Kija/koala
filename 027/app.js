@@ -63,3 +63,42 @@ console.log(map1);
 console.log('----------');
 
 map1.forEach(a => console.log(a));
+
+
+class PirkiniuKrepselis {
+
+    constructor() {
+        this.turinys = new Map();
+    }
+
+    idetiSureli(kiekis) {
+        this.ideti('sureliai', kiekis);
+    }
+    idetiPieno(kiekis) {
+        this.ideti('pienas', kiekis);
+    }
+    idetiDuonos(kiekis) {
+        this.ideti('duona', kiekis);
+    }
+
+    ideti(key, kiekis) {
+        if (this.turinys.has(key)) {
+            kiekis = kiekis + this.turinys.get(key);
+        }
+        this.turinys.set(key, kiekis);
+    }
+
+    krepselioTurinys() {
+        console.log(this.turinys);
+    }
+
+}
+
+const K = new PirkiniuKrepselis();
+
+K.idetiDuonos(5);
+K.idetiDuonos(5);
+K.idetiDuonos(5);
+K.idetiSureli(1);
+
+K.krepselioTurinys();
