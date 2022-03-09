@@ -27,10 +27,17 @@ fetch('https://picsum.photos/v2/list')
     .then(response => response.json())
     .then(data => {
         const ul = document.createElement('ul');
-        let html = '';
         data.forEach(element => {
-            html += `<li>${element.author}</li>`;
+            const li = document.createElement('li');
+            const author = document.createTextNode(element.author);
+            li.appendChild(author);
+            ul.appendChild(li);
         });
-        ul.innerHTML = html;
+
+        // let html = '';
+        // data.forEach(element => {
+        //     html = html + `<li>${element.author}</li>`;
+        // });
+        // ul.innerHTML = html;
         document.querySelector('body').appendChild(ul);
     });
