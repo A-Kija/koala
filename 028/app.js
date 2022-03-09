@@ -64,6 +64,7 @@ fetch('https://in3.dev/vinted/api/products/19')
 
 
         const div = document.createElement('div');
+        // title
         const h1 = document.createElement('h1');
         div.appendChild(h1);
         h1.appendChild(document.createTextNode(data.title));
@@ -74,7 +75,6 @@ fetch('https://in3.dev/vinted/api/products/19')
         img1.setAttribute('src', mainImgUrl);
         img1.classList.add('big');
         div.appendChild(img1);
-
 
         data.img.forEach(image => {
             const img = document.createElement('img');
