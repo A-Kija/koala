@@ -66,11 +66,9 @@ map1.forEach(a => console.log(a));
 
 
 class PirkiniuKrepselis {
-
     constructor() {
         this.turinys = new Map();
     }
-
     idetiSureli(kiekis) {
         this.ideti('sureliai', kiekis);
     }
@@ -80,14 +78,12 @@ class PirkiniuKrepselis {
     idetiDuonos(kiekis) {
         this.ideti('duona', kiekis);
     }
-
     ideti(key, kiekis) {
         if (this.turinys.has(key)) {
             kiekis += this.turinys.get(key);
         }
         this.turinys.set(key, kiekis);
     }
-
     krepselioTurinys() {
         console.log(this.turinys);
     }
