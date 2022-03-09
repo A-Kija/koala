@@ -20,4 +20,17 @@ getPost.addEventListener('click', () => {
             h1.innerText = data.title;
             p.innerText = data.body;
         });
-})
+});
+
+
+fetch('https://picsum.photos/v2/list')
+    .then(response => response.json())
+    .then(data => {
+        const ul = document.createElement('ul');
+        let html = '';
+        data.forEach(element => {
+            html += `<li>${element.author}</li>`;
+        });
+        ul.innerHTML = html;
+        document.querySelector('body').appendChild(ul);
+    });
