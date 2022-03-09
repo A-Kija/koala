@@ -41,3 +41,18 @@ fetch('https://picsum.photos/v2/list')
         // ul.innerHTML = html;
         document.querySelector('body').appendChild(ul);
     });
+
+
+
+
+fetch('https://picsum.photos/v2/list')
+    .then(response => response.json())
+    .then(data => {
+        const div = document.createElement('div');
+        data.forEach(element => {
+            const img = document.createElement('img');
+            img.setAttribute('src', element.download_url);
+            div.appendChild(img);
+        });
+        document.querySelector('body').appendChild(div);
+    });
