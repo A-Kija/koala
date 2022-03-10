@@ -1,13 +1,92 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/js/Bord.js":
+/*!************************!*\
+  !*** ./src/js/Bord.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Bord)
+/* harmony export */ });
+/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./src/js/functions.js");
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
+
+var Bord = /*#__PURE__*/_createClass(function Bord(id) {
+  _classCallCheck(this, Bord);
+
+  this.gameBord = (0,_functions__WEBPACK_IMPORTED_MODULE_0__.gameBord)(id);
+});
+
+
+
+/***/ }),
 
 /***/ "./src/js/app.js":
 /*!***********************!*\
   !*** ./src/js/app.js ***!
   \***********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Bord__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Bord */ "./src/js/Bord.js");
 
+window.addEventListener('DOMContentLoaded', function () {
+  var A = new _Bord__WEBPACK_IMPORTED_MODULE_0__["default"]('a');
+  var B = new _Bord__WEBPACK_IMPORTED_MODULE_0__["default"]('b');
+});
+
+/***/ }),
+
+/***/ "./src/js/functions.js":
+/*!*****************************!*\
+  !*** ./src/js/functions.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "array25": () => (/* binding */ array25),
+/* harmony export */   "gameBord": () => (/* binding */ gameBord)
+/* harmony export */ });
+var gameBord = function gameBord(id) {
+  var square = document.createElement('div');
+  square.classList.add('square');
+  square.id = id;
+  var bins = [];
+
+  for (var i = 0; i < 25; i++) {
+    bins[i] = document.createElement('div');
+    bins[i].classList.add('bin');
+    bins[i].dataset['bin-' + i];
+    square.appendChild(bins[i]);
+  }
+
+  document.querySelector('body').appendChild(square);
+  return bins;
+};
+var array25 = function array25() {
+  var arr = [];
+
+  for (var i = 1; i <= 25; i++) {
+    arr.push(i);
+  }
+
+  var arrShuffle = [];
+
+  for (var _i = 1; _i <= 25; _i++) {
+    arrarrShuffle.push(_i);
+  }
+};
 
 /***/ }),
 
@@ -17,7 +96,6 @@
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -83,6 +161,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	

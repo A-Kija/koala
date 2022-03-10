@@ -1,4 +1,24 @@
-$labas: blue;
-h1 {
-    color: $labas;
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.square {
+    border: 1px solid gold;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    .bin {
+        width: 20%;
+        height: 20%;
+        border: 1px solid gold;
+    }
 }
