@@ -1,0 +1,24 @@
+{
+    "name": "balls",
+    "version": "1.0.0",
+    "description": "Nice play with balls",
+    "main": "app.js",
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "keywords": [
+        "nice",
+        "balls"
+    ],
+    "author": "Me",
+    "license": "MIT",
+    "dependencies": {
+        "laravel-mix": "^6.0.43"
+    }
+}
