@@ -13,14 +13,16 @@ export const gameBord = (id) => {
     return bins;
 }
 
-export const array25 = () => {
-    const arr = [];
-    for (let i = 1; i <= 25; i++) {
-        arr.push(i);
-    }
-    const arrShuffle = [];
-    for (let i = 1; i <= 25; i++) {
-        arrarrShuffle.push(i);
-    }
+export const rand = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
+export const array25 = () => {
+    const arr25 = new Set();
+    do {
+        arr25.add(rand(1, 25));
+    } while (arr25.size < 25);
+    return [...arr25];
 }

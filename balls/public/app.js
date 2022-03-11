@@ -13,19 +13,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Bord)
 /* harmony export */ });
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./src/js/functions.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
+var Bord = /*#__PURE__*/function () {
+  function Bord(id) {
+    _classCallCheck(this, Bord);
 
-var Bord = /*#__PURE__*/_createClass(function Bord(id) {
-  _classCallCheck(this, Bord);
+    this.gameBord = (0,_functions__WEBPACK_IMPORTED_MODULE_0__.gameBord)(id);
+  }
 
-  this.gameBord = (0,_functions__WEBPACK_IMPORTED_MODULE_0__.gameBord)(id);
-});
+  _createClass(Bord, [{
+    key: "fillWithNewBalls",
+    value: function fillWithNewBalls() {
+      var a25 = (0,_functions__WEBPACK_IMPORTED_MODULE_0__.array25)();
+      this.gameBord.forEach(function (bin) {
+        var ball = document.createElement('div');
+        var number = document.createTextNode(a25.shift());
+        ball.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        ball.appendChild(number);
+        bin.appendChild(ball);
+      });
+    }
+  }]);
+
+  return Bord;
+}();
 
 
 
@@ -43,6 +61,8 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', function () {
   var A = new _Bord__WEBPACK_IMPORTED_MODULE_0__["default"]('a');
   var B = new _Bord__WEBPACK_IMPORTED_MODULE_0__["default"]('b');
+  A.fillWithNewBalls();
+  B.fillWithNewBalls();
 });
 
 /***/ }),
@@ -56,8 +76,21 @@ window.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "array25": () => (/* binding */ array25),
-/* harmony export */   "gameBord": () => (/* binding */ gameBord)
+/* harmony export */   "gameBord": () => (/* binding */ gameBord),
+/* harmony export */   "rand": () => (/* binding */ rand)
 /* harmony export */ });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var gameBord = function gameBord(id) {
   var square = document.createElement('div');
   square.classList.add('square');
@@ -74,18 +107,19 @@ var gameBord = function gameBord(id) {
   document.querySelector('body').appendChild(square);
   return bins;
 };
+var rand = function rand(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
 var array25 = function array25() {
-  var arr = [];
+  var arr25 = new Set();
 
-  for (var i = 1; i <= 25; i++) {
-    arr.push(i);
-  }
+  do {
+    arr25.add(rand(1, 25));
+  } while (arr25.size < 25);
 
-  var arrShuffle = [];
-
-  for (var _i = 1; _i <= 25; _i++) {
-    arrarrShuffle.push(_i);
-  }
+  return _toConsumableArray(arr25);
 };
 
 /***/ }),

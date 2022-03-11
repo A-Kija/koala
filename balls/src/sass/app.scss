@@ -20,5 +20,20 @@ body {
         width: 20%;
         height: 20%;
         border: 1px solid gold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 30px;
+            font-weight: bold;
+            color: black;
+            text-shadow: 2px 2px 2px white;
+        }
     }
 }
