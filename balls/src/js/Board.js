@@ -21,7 +21,12 @@ export default class Board {
             });
             bin.appendChild(ball);
         })
+    }
 
+    clearBalls() {
+        this.gameBoard.forEach(bin => {
+            bin.innerHTML = '';
+        });
     }
 
 }

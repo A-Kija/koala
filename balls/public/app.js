@@ -46,6 +46,13 @@ var Board = /*#__PURE__*/function () {
         bin.appendChild(ball);
       });
     }
+  }, {
+    key: "clearBalls",
+    value: function clearBalls() {
+      this.gameBoard.forEach(function (bin) {
+        bin.innerHTML = '';
+      });
+    }
   }]);
 
   return Board;
@@ -66,6 +73,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Game)
 /* harmony export */ });
 /* harmony import */ var _Board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Board */ "./src/js/Board.js");
+/* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions */ "./src/js/functions.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -73,6 +81,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -84,25 +93,49 @@ var Game = /*#__PURE__*/function () {
   _createClass(Game, null, [{
     key: "loadGame",
     value: function loadGame() {
+      var _this = this;
+
       this.A = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('a');
       this.B = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('b');
+      this.panel = (0,_functions__WEBPACK_IMPORTED_MODULE_1__.gamePanel)();
+      this.panel.timer.innerText = 0;
+      this.panel.start.addEventListener('click', function () {
+        _this.startGame();
+      });
+      this.panel.reset.addEventListener('click', function () {
+        _this.resetGame();
+      });
     }
   }, {
     key: "startGame",
     value: function startGame() {
+      if (this.gameStatus > 0) {
+        return;
+      }
+
+      this.gameStatus = 1;
       this.A.fillWithNewBalls();
       this.nextBall = 1;
+      this.startTimer();
     }
   }, {
     key: "endGame",
     value: function endGame() {
-      console.log('The END');
+      this.gameStatus = 2;
+      this.stopTimer();
+    }
+  }, {
+    key: "resetGame",
+    value: function resetGame() {
+      this.gameStatus = 0;
+      this.panel.timer.innerText = 0;
+      this.A.clearBalls();
+      this.B.clearBalls();
     }
   }, {
     key: "goToNext",
     value: function goToNext() {
       this.nextBall++;
-      console.log(this.nextBall);
 
       if (this.nextBall > 3) {
         this.endGame();
@@ -122,8 +155,20 @@ var Game = /*#__PURE__*/function () {
       this.B.gameBoard[this.nextBall - 1].appendChild(ball);
     }
   }, {
-    key: "timer",
-    value: function timer() {}
+    key: "startTimer",
+    value: function startTimer() {
+      var _this2 = this;
+
+      var time = 0;
+      this.timerId = setInterval(function () {
+        _this2.panel.timer.innerText = ++time;
+      }, 1000);
+    }
+  }, {
+    key: "stopTimer",
+    value: function stopTimer() {
+      clearInterval(this.timerId);
+    }
   }]);
 
   return Game;
@@ -134,6 +179,10 @@ _defineProperty(Game, "A", void 0);
 _defineProperty(Game, "B", void 0);
 
 _defineProperty(Game, "nextBall", void 0);
+
+_defineProperty(Game, "timerId", void 0);
+
+_defineProperty(Game, "gameStatus", 0);
 
 
 
@@ -150,7 +199,6 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', function () {
   _Game__WEBPACK_IMPORTED_MODULE_0__["default"].loadGame();
-  _Game__WEBPACK_IMPORTED_MODULE_0__["default"].startGame();
 });
 
 /***/ }),

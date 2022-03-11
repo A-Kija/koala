@@ -4,6 +4,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: relative;
 }
 
 * {
@@ -38,4 +39,25 @@ body {
   color: black;
   text-shadow: 1px 1px 1px gray;
   cursor: pointer;
+}
+
+.panel {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 1px solid gold;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+}
+.panel h3 {
+  width: 120px;
+  background-color: bisque;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  font-size: 50px;
 }
