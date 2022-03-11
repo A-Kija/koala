@@ -2,15 +2,15 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/Bord.js":
-/*!************************!*\
-  !*** ./src/js/Bord.js ***!
-  \************************/
+/***/ "./src/js/Board.js":
+/*!*************************!*\
+  !*** ./src/js/Board.js ***!
+  \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Bord)
+/* harmony export */   "default": () => (/* binding */ Board)
 /* harmony export */ });
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./src/js/functions.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21,18 +21,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-var Bord = /*#__PURE__*/function () {
-  function Bord(id) {
-    _classCallCheck(this, Bord);
+var Board = /*#__PURE__*/function () {
+  function Board(id) {
+    _classCallCheck(this, Board);
 
-    this.gameBord = (0,_functions__WEBPACK_IMPORTED_MODULE_0__.gameBord)(id);
+    this.gameBoard = (0,_functions__WEBPACK_IMPORTED_MODULE_0__.gameBoard)(id);
   }
 
-  _createClass(Bord, [{
+  _createClass(Board, [{
     key: "fillWithNewBalls",
     value: function fillWithNewBalls() {
       var a25 = (0,_functions__WEBPACK_IMPORTED_MODULE_0__.array25)();
-      this.gameBord.forEach(function (bin) {
+      this.gameBoard.forEach(function (bin) {
         var ball = document.createElement('div');
         var number = document.createTextNode(a25.shift());
         ball.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -42,7 +42,7 @@ var Bord = /*#__PURE__*/function () {
     }
   }]);
 
-  return Bord;
+  return Board;
 }();
 
 
@@ -56,13 +56,13 @@ var Bord = /*#__PURE__*/function () {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Bord__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Bord */ "./src/js/Bord.js");
+/* harmony import */ var _Board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Board */ "./src/js/Board.js");
 
 window.addEventListener('DOMContentLoaded', function () {
-  var A = new _Bord__WEBPACK_IMPORTED_MODULE_0__["default"]('a');
-  var B = new _Bord__WEBPACK_IMPORTED_MODULE_0__["default"]('b');
+  var A = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('a');
+  var B = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('b');
   A.fillWithNewBalls();
-  B.fillWithNewBalls();
+  console.log('alio');
 });
 
 /***/ }),
@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "array25": () => (/* binding */ array25),
-/* harmony export */   "gameBord": () => (/* binding */ gameBord),
+/* harmony export */   "gameBoard": () => (/* binding */ gameBoard),
 /* harmony export */   "rand": () => (/* binding */ rand)
 /* harmony export */ });
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -91,7 +91,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-var gameBord = function gameBord(id) {
+var gameBoard = function gameBoard(id) {
   var square = document.createElement('div');
   square.classList.add('square');
   square.id = id;

@@ -1,15 +1,15 @@
-import { gameBord, array25 } from "./functions";
+import { gameBoard, array25 } from "./functions";
 
 
-export default class Bord {
+export default class Board {
     constructor(id) {
-        this.gameBord = gameBord(id);
+        this.gameBoard = gameBoard(id);
     }
 
 
     fillWithNewBalls() {
         const a25 = array25();
-        this.gameBord.forEach(bin => {
+        this.gameBoard.forEach(bin => {
             const ball = document.createElement('div');
             const number = document.createTextNode(a25.shift());
             ball.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);

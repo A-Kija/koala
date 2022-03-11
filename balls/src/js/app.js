@@ -1,10 +1,12 @@
-import Bord from './Bord';
+import Board from './Board';
 
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    const A = new Bord('a');
-    const B = new Bord('b');
+    const A = new Board('a');
+    const B = new Board('b');
     A.fillWithNewBalls();
-    B.fillWithNewBalls();
+
+    console.log('alio')
+
 });

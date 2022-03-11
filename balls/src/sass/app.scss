@@ -27,13 +27,15 @@ body {
             width: 70px;
             height: 70px;
             display: flex;
+            border: 1px dotted gray;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
             font-size: 30px;
             font-weight: bold;
             color: black;
-            text-shadow: 2px 2px 2px white;
+            text-shadow: 1px 1px 1px gray;
+            cursor: pointer;
         }
     }
 }

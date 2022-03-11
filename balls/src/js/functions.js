@@ -1,4 +1,4 @@
-export const gameBord = (id) => {
+export const gameBoard = (id) => {
     const square = document.createElement('div');
     square.classList.add('square');
     square.id = id;
