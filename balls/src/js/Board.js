@@ -12,11 +12,12 @@ export default class Board {
         const a25 = array25();
         this.gameBoard.forEach(bin => {
             const ball = document.createElement('div');
-            const number = document.createTextNode(a25.shift());
+            const ballId = a25.shift();
+            const number = document.createTextNode(ballId);
             ball.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
             ball.appendChild(number);
-            ball.addEventListener('click', () => {
-                Game.ballClick(number);
+            ball.addEventListener('click', e => {
+                Game.ballClick(ballId, e.target);
             });
             bin.appendChild(ball);
         })

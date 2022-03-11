@@ -26,3 +26,19 @@ export const array25 = () => {
     } while (arr25.size < 25);
     return [...arr25];
 }
+
+
+export const gamePanel = () => {
+    const panel = document.createElement('div');
+    panel.classList.add('panel');
+    const timer = document.createElement('h3');
+    const start = document.createElement('button');
+    start.appendChild(document.createTextNode('start'));
+    const reset = document.createElement('button');
+    reset.appendChild(document.createTextNode('reset'));
+    panel.appendChild(start);
+    panel.appendChild(reset);
+    panel.appendChild(timer);
+    document.querySelector('body').appendChild(panel);
+    return { timer: timer, start: start, reset: reset };
+}

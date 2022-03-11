@@ -15,8 +15,31 @@ export default class Game {
         this.nextBall = 1;
     }
 
-    static ballClick(number) {
-        console.log('ball', number);
+    static endGame() {
+        console.log('The END');
+    }
+
+    static goToNext() {
+        this.nextBall++;
+        console.log(this.nextBall);
+        if (this.nextBall > 3) {
+            this.endGame();
+        }
+    }
+
+    static ballClick(number, ball) {
+        if (this.nextBall == number) {
+            this.moveBall(ball);
+            this.goToNext();
+        }
+    }
+
+    static moveBall(ball) {
+        this.B.gameBoard[this.nextBall - 1].appendChild(ball);
+    }
+
+    static timer() {
+
     }
 
 }

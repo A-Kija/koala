@@ -36,11 +36,12 @@ var Board = /*#__PURE__*/function () {
       var a25 = (0,_functions__WEBPACK_IMPORTED_MODULE_0__.array25)();
       this.gameBoard.forEach(function (bin) {
         var ball = document.createElement('div');
-        var number = document.createTextNode(a25.shift());
+        var ballId = a25.shift();
+        var number = document.createTextNode(ballId);
         ball.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
         ball.appendChild(number);
-        ball.addEventListener('click', function () {
-          _Game__WEBPACK_IMPORTED_MODULE_1__["default"].ballClick(number);
+        ball.addEventListener('click', function (e) {
+          _Game__WEBPACK_IMPORTED_MODULE_1__["default"].ballClick(ballId, e.target);
         });
         bin.appendChild(ball);
       });
@@ -93,10 +94,36 @@ var Game = /*#__PURE__*/function () {
       this.nextBall = 1;
     }
   }, {
-    key: "ballClick",
-    value: function ballClick(number) {
-      console.log('ball', number);
+    key: "endGame",
+    value: function endGame() {
+      console.log('The END');
     }
+  }, {
+    key: "goToNext",
+    value: function goToNext() {
+      this.nextBall++;
+      console.log(this.nextBall);
+
+      if (this.nextBall > 3) {
+        this.endGame();
+      }
+    }
+  }, {
+    key: "ballClick",
+    value: function ballClick(number, ball) {
+      if (this.nextBall == number) {
+        this.moveBall(ball);
+        this.goToNext();
+      }
+    }
+  }, {
+    key: "moveBall",
+    value: function moveBall(ball) {
+      this.B.gameBoard[this.nextBall - 1].appendChild(ball);
+    }
+  }, {
+    key: "timer",
+    value: function timer() {}
   }]);
 
   return Game;
@@ -138,6 +165,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "array25": () => (/* binding */ array25),
 /* harmony export */   "gameBoard": () => (/* binding */ gameBoard),
+/* harmony export */   "gamePanel": () => (/* binding */ gamePanel),
 /* harmony export */   "rand": () => (/* binding */ rand)
 /* harmony export */ });
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -181,6 +209,24 @@ var array25 = function array25() {
   } while (arr25.size < 25);
 
   return _toConsumableArray(arr25);
+};
+var gamePanel = function gamePanel() {
+  var panel = document.createElement('div');
+  panel.classList.add('panel');
+  var timer = document.createElement('h3');
+  var start = document.createElement('button');
+  start.appendChild(document.createTextNode('start'));
+  var reset = document.createElement('button');
+  reset.appendChild(document.createTextNode('reset'));
+  panel.appendChild(start);
+  panel.appendChild(reset);
+  panel.appendChild(timer);
+  document.querySelector('body').appendChild(panel);
+  return {
+    timer: timer,
+    start: start,
+    reset: reset
+  };
 };
 
 /***/ }),
