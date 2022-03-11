@@ -4,7 +4,16 @@ import Game from "./Game";
 
 export default class Board {
     constructor(id) {
-        this.gameBoard = gameBoard(id);
+        const square = document.createElement('div');
+        square.classList.add('square');
+        square.id = id;
+        this.gameBoard = [];
+        for (let i = 0; i < 25; i++) {
+            this.gameBoard[i] = document.createElement('div');
+            this.gameBoard[i].classList.add('bin');
+            square.appendChild(this.gameBoard[i]);
+        }
+        document.querySelector('body').appendChild(square);
     }
 
 
