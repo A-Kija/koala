@@ -98,6 +98,7 @@ var Game = /*#__PURE__*/function () {
       this.A = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('a');
       this.B = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('b');
       this.panel = (0,_functions__WEBPACK_IMPORTED_MODULE_1__.gamePanel)();
+      this.msg = (0,_functions__WEBPACK_IMPORTED_MODULE_1__.msgPanel)();
       this.panel.timer.innerText = 0;
       this.panel.start.addEventListener('click', function () {
         _this.startGame();
@@ -117,12 +118,14 @@ var Game = /*#__PURE__*/function () {
       this.A.fillWithNewBalls();
       this.nextBall = 1;
       this.startTimer();
+      this.msg.innerText = 'Game started';
     }
   }, {
     key: "endGame",
     value: function endGame() {
       this.gameStatus = 2;
       this.stopTimer();
+      this.msg.innerText = 'Game End';
     }
   }, {
     key: "resetGame",
@@ -131,13 +134,15 @@ var Game = /*#__PURE__*/function () {
       this.panel.timer.innerText = 0;
       this.A.clearBalls();
       this.B.clearBalls();
+      this.stopTimer();
+      this.msg.innerText = '';
     }
   }, {
     key: "goToNext",
     value: function goToNext() {
       this.nextBall++;
 
-      if (this.nextBall > 3) {
+      if (this.nextBall > 25) {
         this.endGame();
       }
     }
@@ -145,8 +150,11 @@ var Game = /*#__PURE__*/function () {
     key: "ballClick",
     value: function ballClick(number, ball) {
       if (this.nextBall == number) {
+        this.msg.innerText = 'Nice!';
         this.moveBall(ball);
         this.goToNext();
+      } else {
+        this.msg.innerText = 'Boooo!';
       }
     }
   }, {
@@ -184,6 +192,8 @@ _defineProperty(Game, "timerId", void 0);
 
 _defineProperty(Game, "gameStatus", 0);
 
+_defineProperty(Game, "msg", void 0);
+
 
 
 /***/ }),
@@ -214,6 +224,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "array25": () => (/* binding */ array25),
 /* harmony export */   "gameBoard": () => (/* binding */ gameBoard),
 /* harmony export */   "gamePanel": () => (/* binding */ gamePanel),
+/* harmony export */   "msgPanel": () => (/* binding */ msgPanel),
 /* harmony export */   "rand": () => (/* binding */ rand)
 /* harmony export */ });
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -275,6 +286,12 @@ var gamePanel = function gamePanel() {
     start: start,
     reset: reset
   };
+};
+var msgPanel = function msgPanel() {
+  var msg = document.createElement('div');
+  msg.classList.add('msg');
+  document.querySelector('body').appendChild(msg);
+  return msg;
 };
 
 /***/ }),

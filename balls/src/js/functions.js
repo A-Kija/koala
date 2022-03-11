@@ -42,3 +42,10 @@ export const gamePanel = () => {
     document.querySelector('body').appendChild(panel);
     return { timer: timer, start: start, reset: reset };
 }
+
+export const msgPanel = () => {
+    const msg = document.createElement('div');
+    msg.classList.add('msg');
+    document.querySelector('body').appendChild(msg);
+    return msg;
+}

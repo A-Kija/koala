@@ -1,5 +1,5 @@
 import Board from "./Board";
-import { gamePanel } from "./functions";
+import { gamePanel, msgPanel } from "./functions";
 export default class Game {
 
     static A;
@@ -7,11 +7,13 @@ export default class Game {
     static nextBall;
     static timerId;
     static gameStatus = 0;
+    static msg;
 
     static loadGame() {
         this.A = new Board('a');
         this.B = new Board('b');
         this.panel = gamePanel();
+        this.msg = msgPanel();
         this.panel.timer.innerText = 0;
         this.panel.start.addEventListener('click', () => {
             this.startGame();
@@ -29,11 +31,13 @@ export default class Game {
         this.A.fillWithNewBalls();
         this.nextBall = 1;
         this.startTimer();
+        this.msg.innerText = 'Game started';
     }
 
     static endGame() {
         this.gameStatus = 2;
         this.stopTimer();
+        this.msg.innerText = 'Game End';
     }
 
     static resetGame() {
@@ -41,19 +45,24 @@ export default class Game {
         this.panel.timer.innerText = 0;
         this.A.clearBalls();
         this.B.clearBalls();
+        this.stopTimer();
+        this.msg.innerText = '';
     }
 
     static goToNext() {
         this.nextBall++;
-        if (this.nextBall > 3) {
+        if (this.nextBall > 25) {
             this.endGame();
         }
     }
 
     static ballClick(number, ball) {
         if (this.nextBall == number) {
+            this.msg.innerText = 'Nice!';
             this.moveBall(ball);
             this.goToNext();
+        } else {
+            this.msg.innerText = 'Boooo!';
         }
     }
 

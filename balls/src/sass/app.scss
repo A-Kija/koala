@@ -5,6 +5,7 @@ body {
     justify-content: space-around;
     align-items: center;
     position: relative;
+    margin: 0;
 }
 
 * {
@@ -60,4 +61,18 @@ body {
         padding: 5px;
         font-size: 50px;
     }
+}
+
+.msg {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: 1px solid gold;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    font-size: 40px;
+    height: 60px;
 }
