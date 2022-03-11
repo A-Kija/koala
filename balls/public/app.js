@@ -13,11 +13,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Board)
 /* harmony export */ });
 /* harmony import */ var _functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./functions */ "./src/js/functions.js");
+/* harmony import */ var _Game__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Game */ "./src/js/Game.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 
 
 
@@ -37,6 +39,9 @@ var Board = /*#__PURE__*/function () {
         var number = document.createTextNode(a25.shift());
         ball.style.background = '#' + Math.floor(Math.random() * 16777215).toString(16);
         ball.appendChild(number);
+        ball.addEventListener('click', function () {
+          _Game__WEBPACK_IMPORTED_MODULE_1__["default"].ballClick(number);
+        });
         bin.appendChild(ball);
       });
     }
@@ -49,6 +54,64 @@ var Board = /*#__PURE__*/function () {
 
 /***/ }),
 
+/***/ "./src/js/Game.js":
+/*!************************!*\
+  !*** ./src/js/Game.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Game)
+/* harmony export */ });
+/* harmony import */ var _Board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Board */ "./src/js/Board.js");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var Game = /*#__PURE__*/function () {
+  function Game() {
+    _classCallCheck(this, Game);
+  }
+
+  _createClass(Game, null, [{
+    key: "loadGame",
+    value: function loadGame() {
+      this.A = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('a');
+      this.B = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('b');
+    }
+  }, {
+    key: "startGame",
+    value: function startGame() {
+      this.A.fillWithNewBalls();
+      this.nextBall = 1;
+    }
+  }, {
+    key: "ballClick",
+    value: function ballClick(number) {
+      console.log('ball', number);
+    }
+  }]);
+
+  return Game;
+}();
+
+_defineProperty(Game, "A", void 0);
+
+_defineProperty(Game, "B", void 0);
+
+_defineProperty(Game, "nextBall", void 0);
+
+
+
+/***/ }),
+
 /***/ "./src/js/app.js":
 /*!***********************!*\
   !*** ./src/js/app.js ***!
@@ -56,13 +119,11 @@ var Board = /*#__PURE__*/function () {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Board__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Board */ "./src/js/Board.js");
+/* harmony import */ var _Game__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Game */ "./src/js/Game.js");
 
 window.addEventListener('DOMContentLoaded', function () {
-  var A = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('a');
-  var B = new _Board__WEBPACK_IMPORTED_MODULE_0__["default"]('b');
-  A.fillWithNewBalls();
-  console.log('alio');
+  _Game__WEBPACK_IMPORTED_MODULE_0__["default"].loadGame();
+  _Game__WEBPACK_IMPORTED_MODULE_0__["default"].startGame();
 });
 
 /***/ }),

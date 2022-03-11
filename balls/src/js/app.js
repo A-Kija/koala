@@ -1,12 +1,10 @@
-import Board from './Board';
+import Game from './Game';
 
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    const A = new Board('a');
-    const B = new Board('b');
-    A.fillWithNewBalls();
+    Game.loadGame();
+    Game.startGame();
 
-    console.log('alio')
 
 });
