@@ -249,20 +249,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-// export const gameBoard = (id) => {
-//     const square = document.createElement('div');
-//     square.classList.add('square');
-//     square.id = id;
-//     const bins = [];
-//     for (let i = 0; i < 25; i++) {
-//         bins[i] = document.createElement('div');
-//         bins[i].classList.add('bin');
-//         bins[i].dataset['bin-' + i];
-//         square.appendChild(bins[i]);
-//     }
-//     document.querySelector('body').appendChild(square);
-//     return bins;
-// }
 var rand = function rand(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);

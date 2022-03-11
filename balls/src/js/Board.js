@@ -1,6 +1,5 @@
-import { gameBoard, array25 } from "./functions";
+import { array25 } from "./functions";
 import Game from "./Game";
-
 
 export default class Board {
     constructor(id) {
@@ -15,7 +14,6 @@ export default class Board {
         }
         document.querySelector('body').appendChild(square);
     }
-
 
     fillWithNewBalls() {
         const a25 = array25();
